@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.Interior-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Interior-header {
+    height: 6.2vw;
+    color: #292F36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Head-I {
+    width: 70vw;
+    max-width: 1200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Head-I nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.Head-I li {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.25em;
+    cursor: pointer;
+    height: 1.3vw;
+}
+
+.Li-loop-I {
+    margin-left: 1.5vw !important;
+    margin-top: 0.1vw;
+}
+
+.Head-I li + li {
+    margin-left: 3vw;
+}
+
+.Head-I li img {
+    height: 1.3vw;
+    width: 1.3vw;
+}
+
+.Logo-I {
+    height: 3.5vw;
+    width: fit-content;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo-I img {
+    height: 100%;
+}
+
+.Banner-I {
+    width: 70vw;
+    max-width: 1200px;
+    position: relative;
+    height: fit-content;
+}
+
+.Banner-I img {
+    width: 100%;
+}
+
+.Banner-text-I {
+    position: absolute;
+    color: black;
+    top: 25%;
+    left: 5%;
+    width: 40%;
+    height: 50%;
+}
+
+.Subtitle-I {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 4vw;
+    color: #292F36;
+}
+
+.Desc-I {
+    color: #4D5053;
+    font-size: 1.4vw;
+    line-height: 1.5em;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+}
+
+.Start-I {
+    width: 48%;
+    height: 21%;
+    color: white;
+    background-color: #292F36;
+    border-radius: 1vw;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0.7vw 1.3vw rgba(192, 192, 192, 0.35);
+}
+
+.Start-I img {
+    height: 1vw;
+    margin-left: 4%;
+    width: fit-content;
+}
+
+.Plans-I {
+    color: #292F36;
+    width: 70vw;
+    max-width: 1200px;
+    height: fit-content;
+    margin: 10vw 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Plan-I {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Plan-sub-I {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+}
+
+.Plan-desc-I {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.3vw;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    color: #4D5053;
+    margin-top: 8%;
+    margin-bottom: 15%;
+}
+
+.Read-I {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    color: #4D5053;
+    cursor: pointer;
+}
+
+.Read-I img {
+    margin-left: 0.5vw;
+    width: 1vw;
+}
+
+.Create-I {
+    width: 70vw;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #292F36;
+}
+
+.Create-text-I {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Create-sub-I {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 1.3em;
+    width: 90%;
+}
+
+.Create-desc-I {
+    font-size: 1.1vw;
+    line-height: 1.7em;
+    letter-spacing: 0.05vw;
+    margin: 8% 0;
+}
+
+.Create-pic-I {
+    width: 54%;
+}
+
+.Create-pic-I img {
+    width: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+}
+
+.Create-call-I {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Phone-I {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    background-color: #F4F0EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Phone-I img {
+    height: 35%;
+}
+
+.Call-text-I {
+    margin-left: 1vw;
+}
+
+.Num-I {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.3vw;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    color: #4D5053;
+}
+
+.Call-callus-I {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+    color: #4D5053;
+}
+
+.Getfree-I {
+    margin-top: 8%;
+    width: 13vw;
+    height: 4vw;
+    color: white;
+    background-color: #292F36;
+    border-radius: 1vw;
+    font-family: 'Jost', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0.7vw 1.3vw rgba(192, 192, 192, 0.35);
+}
+
+.Getfree-I img {
+    height: 1vw;
+    margin-left: 3%;
+    width: fit-content;
+}
+
+.Thoughts-I {
+    width: 70vw;
+    max-width: 1200px;
+    /* height: 400px; */
+    background-color: #F4F0EC;
+    margin: 10vw 0;
+    border-radius: 4.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Thoughts-sub-I {
+    font-family: 'DM Serif Display';
+    color: #292F36;
+    width: 40%;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.Thoughts-container-I {
+    margin-bottom: 4vw;
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Thought-small-I {
+    width: 21.5vw;
+    background-color: white;
+    height: 21.5vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Thought-head-I {
+    max-height: 4vw;
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.Head-photo-I {
+    height: 100%;
+    width: 4vw;
+}
+
+.Head-photo-I img {
+    height: 4vw;
+    width: 4vw;
+}
+
+.Head-text-I {
+    color: #292F36;
+    margin-left: 1.2vw;
+}
+
+.Head-name-I {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.01em;
+    color: #292F36;
+}
+
+.Head-city-I {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: #4D5053;
+}
+
+.Thought-text-I {
+    color: #4D5053;
+    margin-top: 1.2vw;
+    width: 80%;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.5em;
+}
