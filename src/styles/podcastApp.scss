@@ -1,0 +1,121 @@
+@use 'podcast';
+
+.PApp {
+    width: 100%;
+    padding: 120px 0 100px 0;
+    background-color: podcast.$blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .AvGroupImgs {
+        height: 100%;
+        position: relative;
+    }
+
+    .AvailableGroup1 {
+        user-select: none;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        .Sparkle1 {
+            position: absolute;
+            height: 4%;
+            z-index: 6;
+            top: 38%;
+            left: 5vw;
+        }
+
+        .Sparkle2 {
+            position: absolute;
+            height: 8%;
+            z-index: 6;
+            top: 41%;
+            left: 7vw;
+        }
+
+        .Sparkle3 {
+            position: absolute;
+            height: 15%;
+            z-index: 6;
+            top: 44%;
+            left: -0.5vw;
+        }
+
+        .AvailPhone1 {
+            position: absolute;
+            height: 50%;
+            z-index: 5;
+            bottom: 0;
+        }
+    }
+
+    .AvailableGroup2 {
+        user-select: none;
+        height: 100%;
+        position: absolute;
+        right: 22.5vw;
+        bottom: 0;
+
+        .AvailBlack {
+            height: 10%;
+            position: absolute;
+            z-index: 5;
+            bottom: 0;
+            left: 5vw;
+        }
+
+        .AvailPhone2 {
+            height: 90%;
+            position: absolute;
+            z-index: 6;
+            bottom: 0;
+        }
+    }
+
+    .PAppBeta {
+        user-select: none;
+        width: fit-content;
+        color: podcast.$orange;
+        padding: 3px 5px;
+        border-radius: 4px;
+        border: solid 1px podcast.$orange;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .PAppSub {
+        width: 30%;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .PAppPar {
+        font-size: 18px;
+        color: podcast.$dark-grey;
+        margin-bottom: 160px;
+    }
+
+    .PDownloadBtn {
+        @include podcast.button();
+        @include podcast.click();
+        margin-bottom: 20px;
+    }
+
+    .PAlsoAvail {
+        font-size: 12px;
+        color: podcast.$dark-grey;
+        margin-bottom: 10px;
+    }
+
+    .PAlsoAvailImg {
+        user-select: none;
+        width: 7%;
+    }
+}

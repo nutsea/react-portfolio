@@ -1,0 +1,156 @@
+@use 'podcast';
+
+.None {
+    display: none !important;
+}
+
+.PEpsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+    .PEpsSubNotYet {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        color: podcast.$dark-grey;
+    }
+
+    .EpsLinesImg {
+        position: absolute;
+        height: 20vw;
+        right: -11vw;
+        top: -12vw;
+    }
+
+    .PEps {
+        width: calc(49% - 30px);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        border: solid 2px black;
+        margin-bottom: 25px;
+
+        .EpsContent {
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            margin-bottom: 15px;
+
+            .EpsImage {
+                width: 45%;
+                margin-right: 20px;
+
+                img {
+                    user-select: none;
+                    width: 100%;
+                }
+            }
+
+            .EpsText {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .EpsNum {
+                    color: podcast.$orange;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                .EpsSub {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &:active {
+                        transform: scale(0.98);
+                    }
+                }
+
+                .EpsSlash {
+                    height: 0.5px;
+                    width: 100%;
+                    background-color: podcast.$dark-grey;
+                    margin-bottom: 10px;
+                }
+
+                .EpsPar {
+                    font-size: 16px;
+                    color: podcast.$dark-grey;
+                }
+            }
+        }
+
+        .EpsTags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: fit-content;
+
+            .EpsThemes {
+                display: flex;
+                flex-direction: row;
+
+                .EpsTheme {
+                    user-select: none;
+                    height: fit-content;
+                    padding: 5px 10px;
+                    color: podcast.$dark-grey;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    border: solid 1px podcast.$dark-grey;
+                }
+
+                .EpsTheme + .EpsTheme {
+                    margin-left: 8px;
+                }
+            }
+
+            .EpsHost {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: fit-content;
+
+                .EpsHostText {
+                    color: podcast.$dark-grey;
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-right: 10px;
+                }
+
+                .EpsHostImg {
+                    height: 30px;
+
+                    img {
+                        user-select: none;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .EpsShadow {
+        box-shadow: 10px 10px 0 podcast.$dark-blue;
+        .EpsSub {
+            color: podcast.$orange;
+        }
+    }
+}

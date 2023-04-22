@@ -1,66 +1,21 @@
-/* .Header {
-    display: none;
-} */
+.swiper {
+    height: 23vw;
+    width: 130vw;
+}
 
 .swiper, .swiper-wrapper {
-    /* width: calc(2880px * 0.2); */
-    /* height: calc(1694px * 0.2); */
-    /* overflow: visible; */
-    height: calc(150vw * 0.1694);
-    width: calc(150vw * 0.2880);
-    /* position: unset; */
-    margin: unset;
+    user-select: none;
 }
 
-.Work-text {
-    position: absolute;
-    font-family: 'Jost', sans-serif;
-    font-size: 3vw;
-    font-weight: 600;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-button-prev {
-    position: absolute;
-    color: white;
-}
-
-.swiper-button-next {
-    position: absolute;
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-    color: white;
-}
-
-.swiper-scrollbar-drag {
-    background: rgba(255, 255, 255, 0.5) !important;
-}
-
-.swiper-pagination-bullet {
-    background: white !important;
-}
-
-.RightWork, .LeftWork {
-    pointer-events: none;
-    display: none;
-}
-
-.swiper-pagination {
-    pointer-events: none;
-}
-
-.GoToProject {
-    width: 100%;
-    height: 100%;
-    left: unset;
-    right: unset;
-    top: unset;
-    padding: 0;
+.swiper img {
     cursor: pointer;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.swiper img:hover {
+    opacity: 0.7;
+}
+
+.swiper img:active {
+    transform: scale(0.98);
 }

@@ -1,0 +1,572 @@
+.E-textbook-content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CONTENT */
+
+/* TEXTBOOK HEADER */
+
+.E-textbook-header {
+    width: calc(70% - 40px);
+    min-width: calc(792px - 40px);
+    height: 72px;
+    margin: 29px 0;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.E-textbook-cathegory {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 22px;
+    line-height: 29px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.E-textbook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.E-textbook-cathegory img {
+    height: 29px;
+    margin-right: 7px;
+}
+
+.E-textbook-sprint-btn {
+    position: relative;
+    background-color: var(--light-pink);
+    color: var(--pink);
+    padding: 9px 29px 9px 36px;
+    border-radius: 10px;
+    margin-right: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    opacity: 1;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+}
+
+.E-textbook-sprint-btn:hover {
+    opacity: 0.8;
+}
+
+.E-textbook-sprint-btn:active {
+    transform: scale(0.95);
+}
+
+.E-textbook-sprint-btn img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -10px;
+}
+
+.E-textbook-audio-btn {
+    position: relative;
+    background-color: var(--light-blue);
+    color: var(--blue);
+    padding: 9px 29px 9px 36px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    opacity: 1;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+}
+
+.E-textbook-audio-btn:hover {
+    opacity: 0.8;
+}
+
+.E-textbook-audio-btn:active {
+    transform: scale(0.95);
+}
+
+.E-textbook-audio-btn img {
+    position: absolute;
+    height: 100%;
+    top: -3px;
+    left: -1.5px;
+}
+
+/* TEXTBOOK LEVELS */
+
+.E-textbook-levels {
+    width: 720px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: black;
+    font-size: 22px;
+    height: 21.6px;
+    height: 35px;
+    margin-bottom: 29.6px;
+}
+
+.E-level-num {
+    line-height: 22px;
+    height: 21.6px;
+    margin-right: 7px;
+}
+
+.E-this-level {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.E-this-level::after {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    bottom: -11px;
+}
+
+.E-level {
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.E-mini-level, .E-this-mini-level {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3.6px 7px;
+    border-radius: 4px;
+}
+
+.E-easy.E-this-mini-level {
+    color: white;
+    background-color: var(--green);
+}
+
+.E-easy {
+    background-color: var(--light-green);
+    color: var(--green);
+}
+
+.E-medium {
+    background-color: var(--light-yellow);
+    color: var(--yellow);
+}
+
+.E-hard {
+    background-color: var(--light-red);
+    color: var(--red);
+}
+
+/* TEXTBOOK WORDS */
+
+.E-textbook-words {
+    width: 792px;
+}
+
+.E-word {
+    width: 100%;
+    height: 259px;
+    background-color: white;
+    color: black;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px var(--shadow);
+    display: flex;
+    flex-direction: row;
+}
+
+.E-word + .E-word {
+    margin-top: 29px;
+}
+
+.E-word-img-2 {
+    display: none;
+}
+
+.E-word-img-container {
+    max-width: 260px;
+}
+
+.E-word img {
+    height: 100%;
+}
+
+.E-word-content {
+    width: calc(100% - 58px);
+    height: calc(100% - 58px);
+    height: 201px;
+    height: fit-content;
+    padding: 29px;
+}
+
+.E-word-sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 43px;
+}
+
+.E-word-word {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 22px;
+    color: black;
+    height: 39px;
+}
+
+.E-word-word span {
+    color: var(--grey);
+}
+
+.E-word-audio {
+    height: 100%;
+    transition: transform 0.2s linear;
+}
+
+.E-word-audio:active {
+    transform: scale(0.95);
+}
+
+.E-word-audio img {
+    height: 80%;
+    filter: brightness(0.9);
+}
+
+.E-word-pronounce {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 14px;
+}
+
+.E-word-transcription {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 7px;
+    letter-spacing: 0.05em;
+}
+
+.E-word-status {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 9px;
+    border-radius: 4px;
+    color: white;
+}
+
+.E-compound {
+    background-color: var(--red);
+}
+
+.E-learned {
+    background-color: var(--green);
+}
+
+.E-word-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.E-word-slash {
+    margin: 10px 0;
+    height: 1px;
+    background: var(--shadow);
+}
+
+.E-word-example {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--grey);
+    margin-bottom: 14px;
+}
+
+.E-word-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.E-word-buttons button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px 14px;
+    border-radius: 50px;
+    opacity: 1;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+}
+
+.E-word-buttons button:hover {
+    opacity: 0.8;
+}
+
+.E-word-buttons button:active {
+    transform: scale(0.95);
+}
+
+.E-word-learned {
+    margin-bottom: 0;
+}
+
+.E-word-dictionary {
+    margin-bottom: 0 !important;
+}
+
+.E-learn-add {
+    background-color: var(--green);
+    color: white;
+    margin-right: 14px;
+}
+
+.E-learn-rem {
+    background-color: var(--light-green);
+    color: var(--green);
+    margin-right: 14px;
+}
+
+.E-dict-add {
+    background-color: var(--red);
+    color: white;
+}
+
+.E-dict-rem {
+    background-color: var(--light-red);
+    color: var(--red);
+}
+
+/* PAGINATION */
+
+.E-pagination {
+    margin: 43px 0 29px 0;
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.E-pagination button {
+    height: 43px;
+    width: 43px;
+    border-radius: 50px;
+    border: solid 2px var(--blue);
+    color: var(--blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Hide-1-2, .Hide-29-30 {
+    height: 43px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.E-pagination * {
+    height: 43px;
+    margin-left: 14.4px;
+}
+
+.E-margin-0 {
+    margin: 0;
+}
+
+.E-left {
+    transform: rotate(180deg);
+}
+
+.E-this {
+    background-color: var(--blue);
+    color: white !important;
+}
+
+.E-inactive {
+    border: solid 2px var(--grey) !important;
+    color: var(--grey) !important;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .E-textbook-header {
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        min-width: unset !important;
+        width: calc(88% - 40px);
+        justify-content: space-around;
+    }
+
+    .E-textbook-levels {
+        width: 88%;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        z-index: 150;
+    }
+
+    .E-textbook-levels::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+
+    .E-level {
+        margin-left: 53.5px;
+    }
+
+    .E-textbook-words {
+        width: 88%;
+    }
+
+    .E-word-img {
+        max-height: 220px;
+        max-width: 220px;
+        position: absolute;
+        top: calc(50% - 110px);
+        left: 3%;
+        border-radius: 14px;
+    }
+
+    .E-word {
+        height: fit-content;
+        position: relative;
+    }
+
+    .E-word-content {
+        margin-left: 260px;
+    }
+}
+
+@media (max-width: 770px) {
+    .E-word-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .E-word-buttons button {
+        width: fit-content;
+    }
+    
+    .E-word-learned {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .E-word-content {
+        margin-left: 0;
+    }
+
+    .E-word {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .E-word-img-container {
+        min-width: 100%;
+        width: 100%;
+        height: 200px;
+        height: 30vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: -1px;
+    }
+
+    .E-word-img {
+        display: none;
+    }
+
+    .E-word-img-2 {
+        display: unset;
+        min-width: 100%;
+        width: min-content;
+    }
+
+    .E-word-content {
+        margin-top: calc(30vw - 1px);
+    }
+
+    .E-word-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .E-word-learned {
+        margin-bottom: 0px !important;
+    }
+
+    .E-pagination {
+        display: none;
+    }
+
+    .E-textbook-words {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 475px) {
+    .E-word-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .E-word-learned {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .E-tr-slash {
+        display: none;
+    }
+
+    .E-word-sub {
+        height: fit-content;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .E-word-word {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .E-word-audio {
+        padding: 0;
+    }
+
+    .E-word-audio img {
+        margin-top: 5px;
+        max-height: 50px;
+    }
+}

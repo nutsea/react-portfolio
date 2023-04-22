@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import './../styles/main.css'
 
 const Contact = () => {
     const form = useRef()
@@ -93,7 +92,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault()
-        const lang = localStorage.getItem('glassLang')
+        const lang = localStorage.getItem('Lang')
         const name = document.querySelector('.Contact-name')
         const email = document.querySelector('.Contact-email')
         const message = document.querySelector('.Message-area')
@@ -104,9 +103,11 @@ const Contact = () => {
         const sentError = document.querySelector('.Error-sent')
         const sending = document.querySelector('.Sending-en')
         const sendingRu = document.querySelector('.Sending-ru')
+        const close = document.getElementsByClassName('CloseAlert')
+        const sentM = document.getElementsByClassName('SentAlert')
         if (lang === 'russian') {
             if (nameRu.value.length !== 0 && emailValidation(emailRu.value) && messageRu.value.length !== 0) {
-                sendingRu.setAttribute('style', `opacity: 1; transform: translateX(450px)`)
+                sendingRu.setAttribute('style', `opacity: 1; transform: translateX(600px)`)
                 setTimeout(() => {
                     sendingRu.setAttribute('style', `opacity: 0; transform: translateX(-100px)`)
                 }, 1200)
@@ -121,9 +122,15 @@ const Contact = () => {
                         (result) => {
                         console.log(result.text)
                         sent.classList.remove('Hide')
-                        setTimeout(() => {
+                        const Closer = setTimeout(() => {
                             sent.classList.add('Hide')
                         }, 4000)
+                        for (let i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function() {
+                                sentM[i].classList.add('Hide')
+                                clearTimeout(Closer)
+                            })
+                        }
                         nameRu.value = ''
                         emailRu.value = ''
                         messageRu.value = ''
@@ -131,9 +138,15 @@ const Contact = () => {
                     (error) => {
                         console.log(error.text)
                         sentError.classList.remove('Hide')
-                        setTimeout(() => {
+                        const Closer = setTimeout(() => {
                             sentError.classList.add('Hide')
                         }, 4000)
+                        for (let i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function() {
+                                sentM[i].classList.add('Hide')
+                                clearTimeout(Closer)
+                            })
+                        }
                     }
                     )
             }
@@ -145,7 +158,7 @@ const Contact = () => {
         }
         else {
             if (name.value.length !== 0 && emailValidation(email.value) && message.value.length !== 0) {
-                sending.setAttribute('style', `opacity: 1; transform: translateX(450px)`)
+                sending.setAttribute('style', `opacity: 1; transform: translateX(600px)`)
                 setTimeout(() => {
                     sending.setAttribute('style', `opacity: 0; transform: translateX(-100px)`)
                 }, 1200)
@@ -160,9 +173,17 @@ const Contact = () => {
                         (result) => {
                         console.log(result.text)
                         sent.classList.remove('Hide')
-                        setTimeout(() => {
+
+                        const Closer = setTimeout(() => {
+                            console.log('hide')
                             sent.classList.add('Hide')
                         }, 4000)
+                        for (let i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function() {
+                                sentM[i].classList.add('Hide')
+                                clearTimeout(Closer)
+                            })
+                        }
                         name.value = ''
                         email.value = ''
                         message.value = ''
@@ -170,9 +191,16 @@ const Contact = () => {
                     (error) => {
                         console.log(error.text)
                         sentError.classList.remove('Hide')
-                        setTimeout(() => {
+
+                        const Closer = setTimeout(() => {
                             sentError.classList.add('Hide')
                         }, 4000)
+                        for (let i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function() {
+                                sentM[i].classList.add('Hide')
+                                clearTimeout(Closer)
+                            })
+                        }
                     }
                     )
             }
@@ -205,17 +233,10 @@ const Contact = () => {
                 i.classList.remove('Invis')
             }
         }
-        const close = document.getElementsByClassName('CloseAlert')
-        const sent = document.getElementsByClassName('Message-sent')
-        for (let i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                sent[i].classList.add('Hide')
-            })
-        }
     })
 
     return (
-        <div>
+        <div className="Contact-container">
             <form ref={form} onSubmit={sendEmail} className="Contact-form En">
                 <input 
                     className='Contacts-input Contact-name Name-en En' 
@@ -224,13 +245,6 @@ const Contact = () => {
                     placeholder='Name' 
                     onChange={handleChangeName}
                 />
-                {/* <input 
-                    className='Contacts-input Contact-name Name-ru Ru Invis' 
-                    type="text" 
-                    name="user_name" 
-                    placeholder='Имя' 
-                    onChange={handleChangeNameRu}
-                /> */}
                 <span className='Name-error'></span>
                 <input 
                     className='Contacts-input Contact-email Email-en En' 
@@ -239,32 +253,16 @@ const Contact = () => {
                     placeholder='Email' 
                     onChange={handleChangeEmail}
                 />
-                {/* <input 
-                    className='Contacts-input Contact-email Email-ru Ru Invis' 
-                    type="mail" 
-                    name="user_email" 
-                    placeholder='Электронная почта' 
-                    onChange={handleChangeEmailRu}
-                /> */}
                 <span className='Email-error'></span>
                 <textarea className='Message-area Message-en En' name="message" placeholder='Message' onChange={handleChangeMessage} />
-                {/* <textarea className='Message-area Message-ru Ru Invis' name="message" placeholder='Сообщение' onChange={handleChangeMessageRu} /> */}
                 <span className='Message-error'></span>
                 <div className='Sending-container'><div className='Sending Sending-en'></div></div>
                 <div className="center-send">
                     <button className="btn-send En" type="submit" value="Send">SEND</button>
-                    {/* <button className="btn-send Ru Invis" type="submit" value="Send">ОТПРАВИТЬ</button> */}
                 </div>
             </form>
             
             <form ref={form2} onSubmit={sendEmail} className="Contact-form Ru Invis">
-                {/* <input 
-                    className='Contacts-input Contact-name Name-en En' 
-                    type="text" 
-                    name="user_name" 
-                    placeholder='Name' 
-                    onChange={handleChangeName}
-                /> */}
                 <input 
                     className='Contacts-input Contact-name Name-ru Ru Invis' 
                     type="text" 
@@ -273,13 +271,6 @@ const Contact = () => {
                     onChange={handleChangeNameRu}
                 />
                 <span className='Name-error Name-error-ru'></span>
-                {/* <input 
-                    className='Contacts-input Contact-email Email-en En' 
-                    type="mail" 
-                    name="user_email" 
-                    placeholder='Email' 
-                    onChange={handleChangeEmail}
-                /> */}
                 <input 
                     className='Contacts-input Contact-email Email-ru Ru Invis' 
                     type="mail" 
@@ -288,12 +279,10 @@ const Contact = () => {
                     onChange={handleChangeEmailRu}
                 />
                 <span className='Email-error Email-error-ru'></span>
-                {/* <textarea className='Message-area Message-en En' name="message" placeholder='Message' onChange={handleChangeMessage} /> */}
                 <textarea className='Message-area Message-ru Ru Invis' name="message" placeholder='Сообщение' onChange={handleChangeMessageRu} />
                 <span className='Message-error Message-error-ru'></span>
                 <div className='Sending-container'><div className='Sending Sending-ru'></div></div>
                 <div className="center-send">
-                    {/* <button className="btn-send En" type="submit" value="Send">SEND</button> */}
                     <button className="btn-send Ru Invis" type="submit" value="Send">ОТПРАВИТЬ</button>
                 </div>
             </form>

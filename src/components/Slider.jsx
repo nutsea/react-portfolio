@@ -1,15 +1,18 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
-import { useNavigate } from 'react-router-dom';
 
 import 'swiper/css';
 import './../styles/slider.css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import chat from './../img/chat/chat.png'
-import cards from './../img/500/500-1.png'
+import sl1 from './../img/podcast/pictures/slides/Sl1.png'
+import sl2 from './../img/podcast/pictures/slides/Sl2.png'
+import sl3 from './../img/podcast/pictures/slides/Sl3.png'
+import sl4 from './../img/podcast/pictures/slides/Sl4.png'
+import sl5 from './../img/podcast/pictures/slides/Sl5.png'
 
 // eslint-disable-next-line
 export default () => {
@@ -22,29 +25,55 @@ export default () => {
     return (
         <Swiper
         modules={[Navigation, Pagination, Scrollbar]}
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={15}
+        slidesPerView={5}
         loop={true}
-        pagination={{ clickable: true }}
         >
         <SwiperSlide>
-            <p className="Work-text">Online chat</p>
-            <div className="Blur">
-                <img src={chat} alt='img' height='100%' width='100%' className="Work-image" />
-            </div>
-            <button className="GoToProject" id='/chat' onClick={handleClickProject}></button>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl1} alt="sl1" height='100%' width='100%' />
         </SwiperSlide>
         <SwiperSlide>
-            <p className="Work-text">Browser game</p>
-            <div className="Blur">
-                <img src={cards} alt="img" height='100%' width='100%' className="Work-image" />
-            </div>
-            <button className="GoToProject" id='/cards' onClick={handleClickProject}></button>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl2} alt="sl2" height='100%' width='100%' />
         </SwiperSlide>
         <SwiperSlide>
-            <p className='Work-text'>Coming soon</p>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl3} alt="sl3" height='100%' width='100%' />
         </SwiperSlide>
-        {/* <SwiperSlide>Slide 4</SwiperSlide> */}
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl4} alt="sl4" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl5} alt="sl5" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl1} alt="sl1" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl2} alt="sl2" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl3} alt="sl3" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl4} alt="sl4" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl5} alt="sl5" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl1} alt="sl1" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl2} alt="sl2" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl3} alt="sl3" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl4} alt="sl4" height='100%' width='100%' />
+        </SwiperSlide>
+        <SwiperSlide>
+            <img id='/podcast/detail' onClick={handleClickProject} src={sl5} alt="sl5" height='100%' width='100%' />
+        </SwiperSlide>
         </Swiper>
     );
 };

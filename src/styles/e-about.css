@@ -1,0 +1,162 @@
+.E-about-content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 57px 0 57px 0;
+}
+
+.E-dev {
+    width: 662px;
+    height: 170px;
+    padding: 29px;
+    color: black;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 10px 30px var(--shadow);
+}
+
+.E-dev + .E-dev {
+    margin-top: 29px;
+}
+
+.E-dev-pic {
+    width: 27%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.E-dev-pic img {
+    height: 95%;
+}
+
+.E-dev-text {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.E-dev-sub {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5%;
+}
+
+.E-dev-sub-name {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 22px;
+}
+
+.E-dev-sub-git {
+    margin-top: 5px;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 7px;
+    margin-left: 7px;
+    cursor: pointer;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.E-dev-sub-git:hover {
+    opacity: 0.8;
+}
+
+.E-dev-sub-git:active {
+    transform: scale(0.95);
+}
+
+.E-dev-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+@media (max-width: 900px) {
+    .E-dev {
+        width: 500px;
+    }
+
+    .E-dev-pic {
+        width: fit-content;
+    }
+
+    .E-dev-text {
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .E-dev {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .E-dev-pic {
+        height: 100px;
+    }
+
+    .E-dev-text {
+        width: 300px;
+        align-items: center;
+    }
+
+    .E-dev-sub-name {
+        font-size: 28px;
+    }
+
+    .E-dev-sub-git {
+        margin-top: 8px;
+        padding: 6px 7px;
+    }
+
+    .E-dev-desc {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .E-about-content {
+        padding: 30px 0 20px 0;
+    }
+
+    .E-dev {
+        transform: scale(0.9);
+    }
+
+    .E-dev + .E-dev {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .E-about-content {
+        padding-top: 20px;
+        padding: 15px 0 5px 0;
+    }
+
+    .E-dev {
+        transform: scale(0.8);
+    }
+
+    .E-dev + .E-dev {
+        margin-top: -15px;
+    }
+}

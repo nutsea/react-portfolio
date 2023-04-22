@@ -1,0 +1,398 @@
+.E-statistics-content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* STATISTICS HEADER */
+
+.E-statistics-header {
+    margin-top: 57px;
+    color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.E-this-statistic {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+}
+
+.E-this-statistic::after {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    border-radius: 14px;
+    background: black;
+    position: absolute;
+    bottom: -7px;
+}
+
+.E-statistics-day {
+    margin-right: 15px;
+}
+
+.E-statistics-alltime {
+    margin-left: 15px;
+}
+
+/* STATISTIC BOXES */
+
+.E-statistics-boxes {
+    margin-top: 36px;
+    width: 1224px;
+    height: 460px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.E-statistics-text {
+    padding: 29px;
+    width: 425.5px;
+    height: calc(460px - 58px);
+    background-color: white;
+    box-shadow: -10px 10px 40px var(--shadow);
+    border-radius: 14px;
+    color: black;
+    position: relative;
+}
+
+.E-statistics-chart {
+    width: 728.3px;
+    height: 100%;
+    height: 460px;
+    background-color: white;
+    box-shadow: 0px 10px 45px var(--shadow);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.E-statistics-sub {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    margin-bottom: 6.3px;
+}
+
+.E-statistics-sub-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--grey);
+    font-weight: 500;
+    margin-bottom: 6.3px;
+}
+
+.E-statistics-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 52px;
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.E-st-res-slash {
+    width: 1px;
+    height: 39px;
+    background-color: var(--shadow);
+    position: absolute;
+    left: calc(50% - 0.5px);
+    top: 15%;
+}
+
+.E-words-results {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.E-st-result {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 29px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Digits-1 {
+    width: 42px;
+}
+
+.Digits-2 {
+    width: 52px;
+}
+
+.E-st-result span {
+    color: var(--blue);
+}
+
+.E-st-result-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+.E-statistics-game {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+}
+
+.E-st-g-1 {
+    margin-bottom: 13px;
+}
+
+.E-st-g-2 {
+    margin-top: 17px;
+}
+
+.E-st-game-pic, .E-st-game-pic img {
+    height: 100%;
+    margin-right: 10px;
+}
+
+.E-st-games-slash {
+    height: 1px;
+    width: 85%;
+    background-color: var(--shadow);
+    position: absolute;
+    left: 7.5%;
+}
+
+.E-st-game-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.E-st-g-t-2 {
+    margin-top: 8.5px;
+}
+
+.E-st-game-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.E-st-game-sub-text {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 22px;
+}
+
+.E-st-game-sub-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    background-color: var(--light-blue);
+    border-radius: 7px;
+    margin-left: 7px;
+}
+
+
+.E-st-game-results {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-top: 13.5px;
+    font-weight: 600;
+}
+
+.E-st-game-results span {
+    color: var(--grey);
+    font-weight: 500;
+}
+
+.E-st-game-results div + div {
+    margin-top: 7px;
+}
+
+/* CHART */
+
+.E-chart {
+    height: 80%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1300px) {
+    .E-statistics-boxes {
+        margin-top: 20px;
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 1170px) {
+    .E-statistics-boxes {
+        margin-top: 0;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1040px) {
+    .E-statistics-boxes {
+        margin-top: -20px;
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 900px) {
+    .E-statistics-boxes {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+        transform: scale(1);
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .E-statistics-text {
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 40px var(--shadow);
+    }
+
+    .E-statistics-chart {
+        width: calc(425.5px + 58px);
+        height: 300px;
+        box-shadow: 0px 0px 40px var(--shadow);
+    }
+
+    .E-statistics-sub {
+        text-align: center;
+    }
+
+    .E-statistics-sub-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .E-statistics-boxes {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .E-statistics-text {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .E-statistics-chart {
+        transform: scale(0.945);
+    }
+}
+
+@media (max-width: 500px) {
+    .E-statistics-boxes {
+        margin-bottom: 15px;
+    }
+
+    .E-statistics-text {
+        width: 375px;
+        margin-bottom: 12px;
+    }
+
+    .E-statistics-chart {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 470px) {
+    .E-statistics-boxes {
+        margin-bottom: 0;
+    }
+
+    .E-statistics-text {
+        width: 350px;
+        margin-bottom: 0;
+    }
+
+    .E-statistics-chart {
+        transform: scale(0.845);
+    }
+}
+
+@media (max-width: 440px) {
+    .E-statistics-boxes {
+        margin-bottom: -10px;
+    }
+
+    .E-statistics-header {
+        font-size: 20px;
+    }
+
+    .E-statistics-text {
+        width: 320px;
+    }
+
+    .E-statistics-chart {
+        margin-top: -10px;
+        transform: scale(0.79);
+    }
+}
+
+@media (max-width: 410px) {
+    .E-statistics-boxes {
+        margin-bottom: -40px;
+    }
+
+    .E-statistics-header {
+        font-size: 18px;
+    }
+
+    .E-statistics-boxes {
+        margin-top: -5px;
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 370px) {
+    .E-statistics-boxes {
+        margin-bottom: -80px;
+    }
+
+    .E-statistics-header {
+        font-size: 16px;
+    }
+
+    .E-statistics-boxes {
+        margin-top: -40px;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 340px) {
+    .E-statistics-boxes {
+        margin-bottom: -120px;
+    }
+
+    .E-statistics-header {
+        font-size: 14px;
+    }
+
+    .E-statistics-boxes {
+        margin-top: -80px;
+        transform: scale(0.7);
+    }
+}
