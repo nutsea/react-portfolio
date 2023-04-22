@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import './../styles/main.css'
 import me from './../img/memoji.PNG'
 import ework from './../img/E-work.png'
-import cards from './../img/500cards.png'
+// import cards from './../img/500cards.png'
 import podcast from './../img/Podcast.png'
 import vk from './../img/vk.svg'
 import git from './../img/gitHub.svg'
