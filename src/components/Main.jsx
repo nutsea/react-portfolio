@@ -240,7 +240,7 @@ const Main = () => {
                                 <div className="WorkDesc En">A platform for learning english with games and statistics of progress. Design template was taken from Figma.</div>
                                 <div className="WorkDesc Ru Invis">Платформа для изучения английского языка с играми и статистикой прогресса. Дизайн-макет был взят из Figma.</div>
                             </div>
-                            <div className="Work Animation">
+                            {/* <div className="Work Animation">
                                 <img src={cards} alt="cards" />
                                 <div className="WorkName">500 cards</div>
                                 <div className="WorkTech">
@@ -252,7 +252,7 @@ const Main = () => {
                                 </div>
                                 <div className="WorkDesc En">Online game like board game "500 angry cards". Except frontend part I made a server part using Socket.io to connect clients.</div>
                                 <div className="WorkDesc Ru Invis">Онлайн игра наподобие настольной игры "500 злобных карт". Помимо фронтенд-части я реализовала серверную часть для связи клиентов с помощью Socket.io.</div>
-                            </div>
+                            </div> */}
                             <div className="Work Animation">
                                 <div className="ImgLinkContainer"><a href="/podcast" rel="noreferrer" target="blank" className="ImgLink"><img src={podcast} alt="podcast" /></a></div>
                                 <div className="WorkName"><a href="/podcast" rel="noreferrer" target="blank">Pod of Cast</a></div>
