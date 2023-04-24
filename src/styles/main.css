@@ -126,7 +126,7 @@ body {
 
 .LogoWork {
     font-size: 14px;
-    font-family: 'Lora', serif;
+    font-family: 'Raleway';
     color: var(--text-light);
 }
 
@@ -177,7 +177,7 @@ body {
 
 .MainContent {
     width: 55%;
-    font-family: 'Lora', serif;
+    font-family: 'Raleway';
     color: var(--text-main);
     display: flex;
     flex-direction: column;
