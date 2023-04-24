@@ -187,8 +187,18 @@
             margin-bottom: 30px;
 
             img {
+                cursor: pointer;
                 width: 100%;
                 margin-bottom: 25px;
+                transition: transform 0.2s linear, opacity 0.2s linear;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &:active {
+                    transform: scale(0.99);
+                }
             }
 
             .PBArtType {

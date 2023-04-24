@@ -349,7 +349,7 @@ const PodcastMain = () => {
                     <img className="PNewsStar" src={blackstarThin} alt="blackstarThin" />
                     <img className="PNewsWave" src={membership} alt="membership" />
                     <div className="PArticle PArtShadow">
-                        <img src={article1} alt="article1" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article1} alt="article1" />
                         <div className="PArtType">PODCAST</div>
                         <div className="PArtSub" id="/podcast/singleblog" onClick={handleNavigate}>Setup your own podcast</div>
                         <div className="PArtPar">
@@ -368,7 +368,7 @@ const PodcastMain = () => {
                         </div>
                     </div>
                     <div className="PArticle">
-                        <img src={article2} alt="article2" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article2} alt="article2" />
                         <div className="PArtType">TIPS & TRICKS</div>
                         <div className="PArtSub" id="/podcast/singleblog" onClick={handleNavigate}>Doodle artwork 101</div>
                         <div className="PArtPar">

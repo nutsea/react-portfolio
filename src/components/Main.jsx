@@ -23,7 +23,7 @@ const Main = () => {
         const eng = document.querySelector('.Eng')
         const rus = document.querySelector('.Rus')
         console.log(lang)
-        if (lang === 'russian') {
+        if (lang === 'russian' || lang !== 'english') {
             for (let i of ruElems){
                 i.classList.remove('Invis')
             }
@@ -52,22 +52,22 @@ const Main = () => {
             eng.textContent = 'English'
             rus.textContent = 'Russian'
         }
-        let options = { threshold: [0.0] }
-        let observer = new IntersectionObserver(onEntry, options)
-        let elements = document.querySelectorAll('.Animation')
-        for (let i of elements) {
-            observer.observe(i)
-        }
+        // let options = { threshold: [0.0] }
+        // let observer = new IntersectionObserver(onEntry, options)
+        // let elements = document.querySelectorAll('.Animation')
+        // for (let i of elements) {
+        //     observer.observe(i)
+        // }
     })
 
-    function onEntry(entry) {
-        entry.forEach(change => {
-            if (change.isIntersecting) {
-                change.target.classList.add('AnimationShow')
-            }
-            else change.target.classList.remove('AnimationShow')
-        })
-    }
+    // function onEntry(entry) {
+    //     entry.forEach(change => {
+    //         if (change.isIntersecting) {
+    //             change.target.classList.add('AnimationShow')
+    //         }
+    //         else change.target.classList.remove('AnimationShow')
+    //     })
+    // }
 
     const changeLang = (e) => {
         const ruElems = document.getElementsByClassName('Ru')

@@ -19,14 +19,14 @@ body {
 
 /* HIDE */
 
-.Animation {
+/* .Animation {
     opacity: 0 !important;
     transition: opacity 2s ease, transform 1s ease;
 }
 
 .AnimationShow {
     opacity: 1 !important;
-}
+} */
 
 .En {
     display: block;

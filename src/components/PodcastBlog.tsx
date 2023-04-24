@@ -96,7 +96,7 @@ const PodcastBlog = () => {
                 <div className="PBNewsContainer">
                     <div className="PBNewsSubNotYet None">There are no posts in this category yet</div>
                     <div id="PBA1" className="PBArticle PBArtShadow Business Productivity All">
-                        <img src={article1} alt="article1" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article1} alt="article1" />
                         <div className="PBArtType">PODCAST</div>
                         <div className="PBArtSub" id="/podcast/singleblog" onClick={handleNavigate}>Setup your own podcast</div>
                         <div className="PBArtPar">
@@ -115,7 +115,7 @@ const PodcastBlog = () => {
                         </div>
                     </div>
                     <div id="PBA2" className="PBArticle TipsTricks All">
-                        <img src={article2} alt="article2" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article2} alt="article2" />
                         <div className="PBArtType">TIPS & TRICKS</div>
                         <div className="PBArtSub" id="/podcast/singleblog" onClick={handleNavigate}>Doodle artwork 101</div>
                         <div className="PBArtPar">
@@ -135,7 +135,7 @@ const PodcastBlog = () => {
                         </div>
                     </div>
                     <div id="PBA3" className="PBArticle News All">
-                        <img src={article3} alt="article3" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article3} alt="article3" />
                         <div className="PBArtType">NEWS</div>
                         <div className="PBArtSub" id="/podcast/singleblog" onClick={handleNavigate}>Mother Nature Taking Over</div>
                         <div className="PBArtPar">
@@ -154,7 +154,7 @@ const PodcastBlog = () => {
                         </div>
                     </div>
                     <div id="PBA4" className="PBArticle Productivity All">
-                        <img src={article4} alt="article4" />
+                        <img id="/podcast/singleblog" onClick={handleNavigate} src={article4} alt="article4" />
                         <div className="PBArtType">PRODUCTIVITY</div>
                         <div className="PBArtSub" id="/podcast/singleblog" onClick={handleNavigate}>How to Be Productive</div>
                         <div className="PBArtPar">
