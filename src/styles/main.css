@@ -17,6 +17,39 @@ body {
     overflow-x: hidden;
 }
 
+/* ERROR PAGE */
+
+.ErrorContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ErrorSub {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.ErrorNavigate {
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 100px;
+    background-color: white;
+    color: var(--background);
+    font-size: 18px;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    cursor: pointer;
+}
+
+.ErrorNavigate:hover {
+    opacity: 0.7;
+}
+
+.ErrorNavigate:active {
+    transform: scale(0.95);
+}
+
 /* HIDE */
 
 .En {
