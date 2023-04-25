@@ -19,15 +19,6 @@ body {
 
 /* HIDE */
 
-/* .Animation {
-    opacity: 0 !important;
-    transition: opacity 2s ease, transform 1s ease;
-}
-
-.AnimationShow {
-    opacity: 1 !important;
-} */
-
 .En {
     display: block;
     opacity: 1;
@@ -43,11 +34,7 @@ body {
 }
 
 .Invis {
-    position: absolute;
-    left: -100000px;
-    opacity: 0;
-    pointer-events: none;
-    z-index: -1;
+    display: none !important;
 }
 
 /* CONTAINERS */
@@ -253,6 +240,7 @@ body {
 }
 
 .ContentName {
+    font-size: 20px;
     height: fit-content;
     user-select: none;
     cursor: default;

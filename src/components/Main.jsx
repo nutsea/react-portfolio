@@ -7,11 +7,8 @@ import podcast from './../img/Podcast.png'
 import vk from './../img/vk.svg'
 import git from './../img/gitHub.svg'
 import Contact from "./Contact";
-import { useNavigate } from "react-router-dom";
 
 const Main = () => {
-    const navigate = useNavigate()
-
     useEffect(() => {
         window.scrollTo(0, 0)
         const ruElems = document.getElementsByClassName('Ru')
@@ -52,22 +49,7 @@ const Main = () => {
             eng.textContent = 'English'
             rus.textContent = 'Russian'
         }
-        // let options = { threshold: [0.0] }
-        // let observer = new IntersectionObserver(onEntry, options)
-        // let elements = document.querySelectorAll('.Animation')
-        // for (let i of elements) {
-        //     observer.observe(i)
-        // }
     })
-
-    // function onEntry(entry) {
-    //     entry.forEach(change => {
-    //         if (change.isIntersecting) {
-    //             change.target.classList.add('AnimationShow')
-    //         }
-    //         else change.target.classList.remove('AnimationShow')
-    //     })
-    // }
 
     const changeLang = (e) => {
         const ruElems = document.getElementsByClassName('Ru')
@@ -91,8 +73,6 @@ const Main = () => {
                 ruLang.classList.remove('ThisLang')
                 enLang.classList.add('ThisLang')
                 localStorage.setItem('Lang', 'english')
-                navigate('/')
-                window.location.reload()
                 break;
             case 'ru':
                 language.textContent = 'Русский'
@@ -107,8 +87,6 @@ const Main = () => {
                 enLang.classList.remove('ThisLang')
                 ruLang.classList.add('ThisLang')
                 localStorage.setItem('Lang', 'russian')
-                navigate('/')
-                window.location.reload()
                 break
             default:
                 break;
