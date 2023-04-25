@@ -101,6 +101,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s linear;
+    position: relative;
 }
 
 .LogoName:hover {

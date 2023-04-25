@@ -126,7 +126,13 @@ const Main = () => {
                 i.classList.add('VarDown')
             }
         }
-    } 
+    }
+
+    const scroll = (e) => {
+        let scroller = document.getElementById(`scrollTo${e.target.id}`)
+        e.preventDefault();
+        scroller && scroller.scrollIntoView({behavior: 'smooth'});
+    }
 
     return (
         <div>
@@ -135,7 +141,7 @@ const Main = () => {
                     <div className="Logo">
                         <img className="LogoImg" src={me} alt="me" />
                         <div className="Name">
-                            <div className="LogoName"><a href="#home">Anastasia Batyrova</a></div>
+                            <div className="LogoName"><div id="Home" onClick={scroll}>Anastasia Batyrova</div></div>
                             <div className="LogoWork">Frontend Developer</div>
                         </div>
                     </div>
@@ -151,23 +157,23 @@ const Main = () => {
             </header>
             <div className="MainContainer">
                 <div className="MainContent">
-                    <div id="home" className="Home Animation">
+                    <div id="scrollToHome" className="Home Animation">
                         <div className="HomeText En">
                             This is my portfolio. It has been made to 
                             show my skills, education and what I can 
                             do on the web page, or just to inspire you. 
                             So I hope you will enjoy the exploration!
                         </div>
-                        <a className="ReadMore En" href="#speciality">EXPLORE</a>
+                        <div className="ReadMore En" id="Speciality" onClick={scroll}>EXPLORE</div>
                         <div className="HomeText Ru Invis">
                             Это моё портфолио. Оно было создано для того, 
                             чтобы показать мои навыки, образование и то, что 
                             я могу создать на веб-странице, или просто 
                             чтобы вдохновить вас. Наслаждайтесь его изучением!
                         </div>
-                        <a className="ReadMore Ru Invis" href="#speciality">ДАЛЕЕ</a>
+                        <div className="ReadMore Ru Invis" id="Speciality" onClick={scroll}>ДАЛЕЕ</div>
                     </div>
-                    <div id="speciality" className="ContentContainer">
+                    <div id="scrollToSpeciality" className="ContentContainer">
                         <div className="ContentName En">SPECIALITY</div>
                         <div className="ContentName Ru">СПЕЦИАЛЬНОСТЬ</div>
                         <div className="ContentDesc">
