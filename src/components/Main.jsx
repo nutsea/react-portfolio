@@ -306,7 +306,7 @@ const Main = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="FooterCopyright">© 2023 nutsea.ru</div>
+                    <div className="FooterCopyright">© 2023 anastasiabatyrova.ru</div>
                 </div>
             </footer>
         </div>
