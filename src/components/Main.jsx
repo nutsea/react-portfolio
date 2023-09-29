@@ -4,6 +4,7 @@ import './../styles/main.css'
 import me from './../img/memoji.PNG'
 import ework from './../img/E-work.png'
 import podcast from './../img/Podcast.png'
+import pudra from './../img/Pudra.png'
 import vk from './../img/vk.svg'
 import git from './../img/gitHub.svg'
 import Contact from "./Contact";
@@ -142,7 +143,7 @@ const Main = () => {
                         <img className="LogoImg" src={me} alt="me" />
                         <div className="Name">
                             <div className="LogoName"><div id="Home" onClick={scroll}>Anastasia Batyrova</div></div>
-                            <div className="LogoWork">Frontend Developer</div>
+                            <div className="LogoWork">Web Developer</div>
                         </div>
                     </div>
                     <div className="HeaderGit">
@@ -186,8 +187,8 @@ const Main = () => {
                             <div className="ContentText En Animation">
                                 I started my way from learning C++ in the institute. 
                                 Some time later I mastered these technologies of 
-                                web development: HTML, CSS, SCSS, JS, ES6, React, 
-                                Node JS, Socket.io and some JS libraries. Also I learnt how git 
+                                web development: React.js, SCSS, 
+                                Node.js, PostgreSQL, Socket.io and some JS libraries. Also I learnt how git 
                                 and npm work.
                             </div>
                             <div className="ContentText En Animation">
@@ -204,7 +205,7 @@ const Main = () => {
                             <div className="ContentText Ru Invis Animation">
                                 Я начала свой путь с изучения C++ в институте. Спустя 
                                 некоторое время я освоила технологии веб-разработки: 
-                                HTML, CSS, SCSS, JS, ES6, React, Node JS, Socket.io и некоторые 
+                                React.js, SCSS, Node.js, PostgreSQL, Socket.io и некоторые 
                                 библиотеки JS. Также я узнала, как работает git и npm.
                             </div>
                             <div className="ContentText Ru Invis Animation">
@@ -219,38 +220,46 @@ const Main = () => {
                         <div className="ContentName Ru Invis">РАБОТЫ</div>
                         <div className="ContentWorks">
                             <div className="Work Animation">
-                                <div className="ImgLinkContainer"><a href="/e-learning" rel="noreferrer" target="blank" className="ImgLink"><img src={ework} alt="ework" /></a></div>
-                                <div className="WorkName"><a href="/e-learning" rel="noreferrer" target="blank">E-learning Platform</a></div>
+                                <div className="ImgLinkContainer">
+                                    <a href="https://pudrazagar.ru" rel="noreferrer" target="_blank" className="ImgLink">
+                                        <img src={pudra} alt="pudra" />
+                                    </a>
+                                </div>
+                                <div className="WorkName">
+                                    <a href="https://pudrazagar.ru" rel="noreferrer" target="_blank">Pudrazagar</a>
+                                </div>
                                 <div className="WorkTech">
-                                    <div>React</div>
-                                    <div>JavaScript</div>
+                                    <div>React.js</div>
+                                    <div>SCSS</div>
+                                    <div>Node.js</div>
+                                    <div>PostgreSQL</div>
+                                </div>
+                                <div className="WorkDesc En">Pudra tanning studio website.</div>
+                                <div className="WorkDesc Ru">Веб-сайт студии загара Pudra.</div>
+                            </div>
+                            <div className="Work Animation">
+                                <div className="ImgLinkContainer">
+                                    <a href="/e-learning" rel="noreferrer" target="blank" className="ImgLink">
+                                        <img src={ework} alt="ework" />
+                                    </a>
+                                </div>
+                                <div className="WorkName">
+                                    <a href="/e-learning" rel="noreferrer" target="blank">E-learning Platform</a>
+                                </div>
+                                <div className="WorkTech">
+                                    <div>React.js</div>
                                     <div>CSS</div>
-                                    <div>Chart.js</div>
                                 </div>
                                 <div className="WorkDesc En">A platform for learning english with games and statistics of progress. Design template was taken from Figma.</div>
                                 <div className="WorkDesc Ru Invis">Платформа для изучения английского языка с играми и статистикой прогресса. Дизайн-макет был взят из Figma.</div>
                             </div>
-                            {/* <div className="Work Animation">
-                                <img src={cards} alt="cards" />
-                                <div className="WorkName">500 cards</div>
-                                <div className="WorkTech">
-                                    <div>React</div>
-                                    <div>JavaScript</div>
-                                    <div>CSS</div>
-                                    <div>Node.js</div>
-                                    <div>Socket.io</div>
-                                </div>
-                                <div className="WorkDesc En">Online game like board game "500 angry cards". Except frontend part I made a server part using Socket.io to connect clients.</div>
-                                <div className="WorkDesc Ru Invis">Онлайн игра наподобие настольной игры "500 злобных карт". Помимо фронтенд-части я реализовала серверную часть для связи клиентов с помощью Socket.io.</div>
-                            </div> */}
                             <div className="Work Animation">
                                 <div className="ImgLinkContainer"><a href="/podcast" rel="noreferrer" target="blank" className="ImgLink"><img src={podcast} alt="podcast" /></a></div>
                                 <div className="WorkName"><a href="/podcast" rel="noreferrer" target="blank">Pod of Cast</a></div>
                                 <div className="WorkTech">
-                                    <div>React</div>
+                                    <div>React.js</div>
                                     <div>TypeScript</div>
                                     <div>SCSS</div>
-                                    <div>Swiper.js</div>
                                 </div>
                                 <div className="WorkDesc En">Online Podcast. Design template was taken from Figma</div>
                                 <div className="WorkDesc Ru Invis">Онлайн-подкаст. Дизайн-макет был взят из Figma.</div>
