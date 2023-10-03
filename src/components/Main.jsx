@@ -5,13 +5,14 @@ import me from './../img/memoji.PNG'
 import ework from './../img/E-work.png'
 import podcast from './../img/Podcast.png'
 import pudra from './../img/Pudra.png'
+import calc from './../img/Calc.png'
 import vk from './../img/vk.svg'
 import git from './../img/gitHub.svg'
 import Contact from "./Contact";
+import comp from './../img/comp3d.PNG'
 
 const Main = () => {
     useEffect(() => {
-        window.scrollTo(0, 0)
         const ruElems = document.getElementsByClassName('Ru')
         const enElems = document.getElementsByClassName('En')
         const ruLang = document.querySelector('.LangRu')
@@ -151,28 +152,31 @@ const Main = () => {
                     </div>
                 </div>
                 <div className="Language">
-                    <button className="LangEn ThisLang" id="en" onClick={changeLang}>EN</button>
+                    <button className="LangEn" id="en" onClick={changeLang}>EN</button>
                     <span className="LangSpan">&nbsp;/&nbsp;</span>
-                    <button className="LangRu" id="ru" onClick={changeLang}>RU</button>
+                    <button className="LangRu ThisLang" id="ru" onClick={changeLang}>RU</button>
                 </div>
             </header>
             <div className="MainContainer">
                 <div className="MainContent">
                     <div id="scrollToHome" className="Home Animation">
-                        <div className="HomeText En">
-                            This is my portfolio. It has been made to 
-                            show my skills, education and what I can 
-                            do on the web page, or just to inspire you. 
-                            So I hope you will enjoy the exploration!
+                        <div className="HomeContent">
+                            <div className="HomeText En">
+                                My name is Anastasia, I'm a web developer. 
+                                Here I will talk about my skills and education. 
+                                Enjoy the exploration!
+                            </div>
+                            <div className="ReadMore En" id="Speciality" onClick={scroll}>EXPLORE</div>
+                            <div className="HomeText Ru Invis">
+                                Меня зовут Анастасия, я веб-разработчик.
+                                Здесь я расскажу о своих навыках и образовании. 
+                                Наслаждайтесь просмотром!
+                            </div>
+                            <div className="ReadMore Ru Invis" id="Speciality" onClick={scroll}>ДАЛЕЕ</div>
                         </div>
-                        <div className="ReadMore En" id="Speciality" onClick={scroll}>EXPLORE</div>
-                        <div className="HomeText Ru Invis">
-                            Это моё портфолио. Оно было создано для того, 
-                            чтобы показать мои навыки, образование и то, что 
-                            я могу создать на веб-странице, или просто 
-                            чтобы вдохновить вас. Наслаждайтесь его изучением!
+                        <div className="CompContainer">
+                            <img src={comp} alt="" />
                         </div>
-                        <div className="ReadMore Ru Invis" id="Speciality" onClick={scroll}>ДАЛЕЕ</div>
                     </div>
                     <div id="scrollToSpeciality" className="ContentContainer">
                         <div className="ContentName En">SPECIALITY</div>
@@ -181,37 +185,33 @@ const Main = () => {
                             <div className="ContentText En Animation">
                                 I am a student of Kazan Federal University. My 
                                 speciality is Applied Mathematics and Informatics. 
-                                I'm very interested in programming so I'm not limited 
-                                by the curriculum and get progress in it by myself too.
+                                In addition to the program at the university, I study on my own.
                             </div>
                             <div className="ContentText En Animation">
                                 I started my way from learning C++ in the institute. 
-                                Some time later I mastered these technologies of 
-                                web development: React.js, SCSS, 
-                                Node.js, PostgreSQL, Socket.io and some JS libraries. Also I learnt how git 
-                                and npm work.
+                                After a while, I moved into the field of web development and studied these technologies:
+                                React.js, MobX, SCSS, Node.js, PostgreSQL, Socket.io and some JS libraries. I also started working with github.
                             </div>
                             <div className="ContentText En Animation">
-                                After a few months of practice I understood that I 
-                                want to work in a company and use my skills there. 
-                                So I made this portfolio to present myself.
+                                For more than a year I have been training and gaining experience 
+                                and now I am ready to work in the company and apply my skills in commercial projects. 
+                                My works will be presented below.
                             </div>
                             <div className="ContentText Ru Invis Animation">
-                                Я учусь в Казанском Федеральном Университете, моя 
-                                специальность - прикладная математика и информатика. 
-                                Я очень заинтересована в программировании и помимо 
-                                учебной программы я развиваюсь самостоятельно.
+                                Я учусь в Казанском Федеральном Университете на 
+                                специальности «Прикладная математика и информатика». 
+                                Помимо программы в ВУЗе я обучаюсь самостоятельно.
                             </div>
                             <div className="ContentText Ru Invis Animation">
-                                Я начала свой путь с изучения C++ в институте. Спустя 
-                                некоторое время я освоила технологии веб-разработки: 
-                                React.js, SCSS, Node.js, PostgreSQL, Socket.io и некоторые 
-                                библиотеки JS. Также я узнала, как работает git и npm.
+                                Мой путь начался с изучения C++ в институте. Спустя 
+                                некоторое время я перешла в сферу веб-разработки и изучила данные технологии:    
+                                React.js, MobX, SCSS, Node.js, PostgreSQL, Socket.io и некоторые 
+                                библиотеки JS. Также я начала работать с github.
                             </div>
                             <div className="ContentText Ru Invis Animation">
-                                Спустя несколько месяцев практики я поняла, что хочу 
-                                работать в компании и применять свои навыки. Поэтому я 
-                                создала это портфолио, чтобы рассказать о себе.
+                                Уже более года я тренируюсь и набираюсь опыта и теперь готова 
+                                работать в компании и применять свои навыки в коммерческих проектах. 
+                                Далее будут представлены мои работы.
                             </div>
                         </div>
                     </div>
@@ -227,6 +227,33 @@ const Main = () => {
                                 </div>
                                 <div className="WorkName">
                                     <a href="https://pudrazagar.ru" rel="noreferrer" target="_blank">Pudrazagar</a>
+                                    <div>fullstack</div>
+                                </div>
+                                <div className="WorkTech">
+                                    <div>React.js</div>
+                                    <div>MobX</div>
+                                    <div>SCSS</div>
+                                    <div>Node.js</div>
+                                    <div>PostgreSQL</div>
+                                </div>
+                                <div className="WorkDesc En">
+                                    Website of the Pudra tanning studio. The site was created to inform 
+                                    about services and promotions, as well as to record customers.
+                                </div>
+                                <div className="WorkDesc Ru">
+                                    Веб-сайт студии загара Pudra. Сайт создан для информирования 
+                                    об услугах и акциях, а также для записи клиентов.
+                                </div>
+                            </div>
+                            <div className="Work Animation">
+                                <div className="ImgLinkContainer">
+                                    <a href="https://main--dancing-cheesecake-968061.netlify.app" rel="noreferrer" target="blank" className="ImgLink">
+                                        <img src={calc} alt="calc" />
+                                    </a>
+                                </div>
+                                <div className="WorkName">
+                                    <a href="https://main--dancing-cheesecake-968061.netlify.app" rel="noreferrer" target="blank">Wear Poizon</a>
+                                    <div>fullstack</div>
                                 </div>
                                 <div className="WorkTech">
                                     <div>React.js</div>
@@ -234,8 +261,12 @@ const Main = () => {
                                     <div>Node.js</div>
                                     <div>PostgreSQL</div>
                                 </div>
-                                <div className="WorkDesc En">Pudra tanning studio website.</div>
-                                <div className="WorkDesc Ru">Веб-сайт студии загара Pudra.</div>
+                                <div className="WorkDesc En">
+                                    Website with a delivery cost calculator and order tracking by track number.
+                                </div>
+                                <div className="WorkDesc Ru">
+                                    Сайт с калькулятором стоимости доставки и отслеживанием заказа по трек-номеру.
+                                </div>
                             </div>
                             <div className="Work Animation">
                                 <div className="ImgLinkContainer">
@@ -245,6 +276,7 @@ const Main = () => {
                                 </div>
                                 <div className="WorkName">
                                     <a href="/e-learning" rel="noreferrer" target="blank">E-learning Platform</a>
+                                    <div>frontend</div>
                                 </div>
                                 <div className="WorkTech">
                                     <div>React.js</div>
@@ -255,7 +287,10 @@ const Main = () => {
                             </div>
                             <div className="Work Animation">
                                 <div className="ImgLinkContainer"><a href="/podcast" rel="noreferrer" target="blank" className="ImgLink"><img src={podcast} alt="podcast" /></a></div>
-                                <div className="WorkName"><a href="/podcast" rel="noreferrer" target="blank">Pod of Cast</a></div>
+                                <div className="WorkName">
+                                    <a href="/podcast" rel="noreferrer" target="blank">Pod of Cast</a>
+                                    <div>frontend</div>
+                                </div>
                                 <div className="WorkTech">
                                     <div>React.js</div>
                                     <div>TypeScript</div>
@@ -292,8 +327,8 @@ const Main = () => {
                                 <div className="Lang-btn Down"></div>
                             </div>
                             <div className="LangList">
-                                    <div className="LanguageSetter Var VarDown Eng" id="en" onClick={changeLang}>English</div>
-                                    <div className="LanguageSetter Var VarDown Rus" id="ru" onClick={changeLang}>Russian</div>
+                                <div className="LanguageSetter Setter2 Var VarDown Eng" id="en" onClick={changeLang}>English</div>
+                                <div className="LanguageSetter Setter2 Var VarDown Rus" id="ru" onClick={changeLang}>Russian</div>
                             </div>
                         </div>
                     </div>

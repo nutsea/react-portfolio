@@ -5,11 +5,12 @@
     --text: rgb(226, 232, 229);
     --text-light: rgba(226, 232, 229, 0.5);
     --text-main: rgba(226, 232, 229, 0.8);
+    --img-border: rgba(199, 199, 199, 0.3);
     --border: rgb(182, 208, 222, 0.5);
     --background: rgb(11, 14, 20);
     --background-light: rgba(11, 14, 20, 0.95);
-    --error: rgb(88, 20, 15);
-    --error-light: rgba(88, 20, 15, 0.5);
+    --error: rgb(71, 161, 221);
+    --error-light: rgba(71, 161, 221, 0.5);
     --tech: rgb(31, 41, 62);
 }
 
@@ -223,11 +224,24 @@ body {
 
 .Home {
     padding-top: 80px;
-    width: 600px;
+    width: 100%;
     min-height: calc(100vh - 80px);
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.HomeContent {
+    width: 50%;
+}
+
+.CompContainer {
+    width: 50%;
+}
+
+.CompContainer img {
+    width: 100%;
 }
 
 .HomeTextMain {
@@ -235,14 +249,13 @@ body {
 }
 
 .HomeText {
-    font-size: 20px;
-    text-align: justify;
-    letter-spacing: 0.02em;
+    font-size: 18px;
     line-height: 30px;
     margin-bottom: 30px;
 }
 
 .ReadMore {
+    cursor: pointer;
     user-select: none;
     font-family: 'Jost', sans-serif;
     color: var(--background);
@@ -289,7 +302,6 @@ body {
 
 .ContentText {
     font-size: 18px;
-    letter-spacing: 0.02em;
     line-height: 30px;
     text-align: justify;
 }
@@ -317,7 +329,10 @@ body {
 
 .ImgLinkContainer {
     cursor: pointer;
-    width: 100%;
+    width: calc(100% - 1px);
+    margin-bottom: 10px;
+    border: solid 0.5px var(--img-border);
+    overflow: hidden;
     transition: opacity 0.2s linear, transform 0.2s linear;
 }
 
@@ -329,11 +344,15 @@ body {
     transform: scale(0.99);
 }
 
+.ImgLinkContainer a {
+    display: flex;
+    height: fit-content;
+}
+
 .Work img {
     user-select: none;
     min-width: 100%;
     max-width: 100%;
-    margin-bottom: 10px;
 }
 
 .WorkName {
@@ -341,18 +360,34 @@ body {
     color: var(--text);
     width: fit-content;
     font-family: 'Jost', sans-serif;
-    font-size: 22px;
-    cursor: pointer;
     transition: transform 0.2s linear;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 
-.WorkName:hover {
+.WorkName a {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.WorkName a:hover {
     text-decoration: underline;
 }
 
-.WorkName:active {
+.WorkName a:active {
     transform: scale(0.95);
+}
+
+.WorkName div {
+    font-size: 12px;
+    background-color: var(--text-main);
+    color: var(--tech);
+    padding: 2px 10px;
+    border-radius: 15px;
 }
 
 .WorkDesc {
@@ -406,7 +441,7 @@ body {
 .Contacts-input {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     min-height: 40px;
     width: 400px;
     padding: 0 15px;
@@ -439,7 +474,7 @@ body {
 .Message-area {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     min-height: 100px;
     width: 400px;
     padding: 15px;
@@ -532,7 +567,6 @@ body {
     font-family: 'Jost', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    letter-spacing: 0.1vw;
     color: var(--text-main);
     border: solid 1px var(--text-main);
     display: flex;
@@ -639,6 +673,8 @@ body {
 }
 
 .FooterAdresses {
+    display: flex;
+    flex-direction: column;
     font-family: 'Jost', sans-serif;
     font-size: 16px;
     color: var(--text-main);
@@ -695,8 +731,7 @@ body {
 .LanguageSetter {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0.1vw;
+    font-weight: 300;
     min-height: 40px;
     width: 400px;
     padding: 0 15px;
@@ -713,6 +748,10 @@ body {
 
 .LanguageSetter:hover {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.Setter2 {
+    width: 400px;
 }
 
 .LangList {
@@ -777,8 +816,12 @@ body {
 }
 
 @media (max-width: 1100px) {
-    .Home {
-        width: 90%;
+    .HomeContent {
+        width: 65%;
+    }
+
+    .CompContainer {
+        width: 35%;
     }
 
     .ContentContainer {
@@ -825,11 +868,6 @@ body {
         width: 80%;
     }
 
-    .Home {
-        max-width: 450px;
-        width: 100%;
-    }
-
     .Contact-container {
         width: 100%;
         display: flex;
@@ -854,6 +892,21 @@ body {
 
     .FooterRow {
         width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .Home {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .CompContainer {
+        width: 60%;
+    }
+
+    .HomeContent {
+        width: 100%;
     }
 }
 
@@ -895,6 +948,29 @@ body {
     .WorkDesc {
         font-size: 16px !important;
         line-height: 22px !important;
+    }
+
+    .CompContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 389px) {
+    .FooterLinks {
+        flex-direction: column;
+    }
+
+    .FooterAdresses {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .FooterAdresses div {
+        margin-bottom: 20px;
+    }
+
+    .SocialMedia {
+        margin-bottom: 20px;
     }
 }
 
