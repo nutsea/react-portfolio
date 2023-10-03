@@ -9,7 +9,7 @@ import calc from './../img/Calc.png'
 import vk from './../img/vk.svg'
 import git from './../img/gitHub.svg'
 import Contact from "./Contact";
-import comp from './../img/comp3d.PNG'
+import comp from './../img/comp3d.png'
 
 const Main = () => {
     useEffect(() => {
