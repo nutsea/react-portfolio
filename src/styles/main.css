@@ -1,0 +1,981 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+* {
+    --text: rgb(226, 232, 229);
+    --text-light: rgba(226, 232, 229, 0.5);
+    --text-main: rgba(226, 232, 229, 0.8);
+    --img-border: rgba(199, 199, 199, 0.3);
+    --border: rgb(182, 208, 222, 0.5);
+    --background: rgb(11, 14, 20);
+    --background-light: rgba(11, 14, 20, 0.95);
+    --error: rgb(71, 161, 221);
+    --error-light: rgba(71, 161, 221, 0.5);
+    --tech: rgb(31, 41, 62);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ERROR PAGE */
+
+.ErrorContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ErrorSub {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.ErrorNavigate {
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 100px;
+    background-color: white;
+    color: var(--background);
+    font-size: 18px;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    cursor: pointer;
+}
+
+.ErrorNavigate:hover {
+    opacity: 0.7;
+}
+
+.ErrorNavigate:active {
+    transform: scale(0.95);
+}
+
+/* HIDE */
+
+.En {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.Ru {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.Invis {
+    display: none !important;
+}
+
+/* CONTAINERS */
+
+.Header {
+    font-family: 'Jost', sans-serif;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    position: fixed;
+    background-color: var(--background-light);
+    z-index: 2;
+}
+
+.HeaderRow {
+    margin-left: calc(11.25% + 32.5px);
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderGit {
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.HeaderGit:hover {
+    text-decoration: underline;
+}
+
+.HeaderGit:active {
+    transform: scale(0.95);
+}
+
+.Logo {
+    height: 70px;
+    width: fit-content;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Logo img {
+    height: 90%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.LogoName {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+    position: relative;
+}
+
+.LogoName:hover {
+    text-decoration: underline;
+}
+
+.LogoName:active {
+    transform: scale(0.95);
+}
+
+.LogoWork {
+    font-size: 14px;
+    font-family: 'Raleway';
+    color: var(--text-light);
+}
+
+.LanguageContainer {
+    display: none !important;
+}
+
+.Language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: calc(11.25% - 32.5px) !important;
+}
+
+.Language, .LangEn, .LangRu {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    user-select: none;
+}
+
+.ThisLang {
+    text-decoration: underline;
+}
+
+.LangSpan {
+    height: 29px;
+    cursor: default;
+}
+
+.LangEn:hover, .LangRu:hover {
+    opacity: 0.7;
+}
+
+.LangEn:active, .LangRu:active {
+    transform: scale(0.95);
+}
+
+.MainContainer {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.MainContent {
+    width: 55%;
+    font-family: 'Raleway';
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Footer {
+    margin-top: 100px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: var(--text-main);
+}
+
+.FooterRow {
+    width: 55%;
+    padding: 20px 0;
+}
+
+/* HOME */
+
+.Home {
+    padding-top: 80px;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.HomeContent {
+    width: 50%;
+}
+
+.CompContainer {
+    width: 50%;
+}
+
+.CompContainer img {
+    width: 100%;
+}
+
+.HomeTextMain {
+    width: 70%;
+}
+
+.HomeText {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.ReadMore {
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Jost', sans-serif;
+    color: var(--background);
+    background-color: var(--text-main);
+    width: fit-content;
+    border-radius: 50px;
+    padding: 2px 15px;
+    font-size: 16px;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.ReadMore:hover {
+    opacity: 0.7;
+}
+
+.ReadMore:active {
+    transform: scale(0.95);
+}
+
+/* SPECIALITY */
+
+.ContentContainer {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.ContentName {
+    font-size: 20px;
+    height: fit-content;
+    user-select: none;
+    cursor: default;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+.ContentDesc {
+    width: 70%;
+}
+
+.ContentText {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.ContentText.En + .ContentText.En,
+.ContentText.Ru + .ContentText.Ru {
+    margin-top: 30px;
+}
+
+.ContentWorks {
+    width: 70%;
+}
+
+.WorksText {
+    margin-bottom: 40px;
+}
+
+.Work {
+    width: 100%;
+}
+
+.Work + .Work {
+    margin-top: 70px;
+}
+
+.ImgLinkContainer {
+    cursor: pointer;
+    width: calc(100% - 1px);
+    margin-bottom: 10px;
+    border: solid 0.5px var(--img-border);
+    overflow: hidden;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.ImgLinkContainer:hover {
+    opacity: 0.7;
+}
+
+.ImgLinkContainer:active {
+    transform: scale(0.99);
+}
+
+.ImgLinkContainer a {
+    display: flex;
+    height: fit-content;
+}
+
+.Work img {
+    user-select: none;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.WorkName {
+    user-select: none;
+    color: var(--text);
+    width: fit-content;
+    font-family: 'Jost', sans-serif;
+    transition: transform 0.2s linear;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.WorkName a {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.WorkName a:hover {
+    text-decoration: underline;
+}
+
+.WorkName a:active {
+    transform: scale(0.95);
+}
+
+.WorkName div {
+    font-size: 12px;
+    background-color: var(--text-main);
+    color: var(--tech);
+    padding: 2px 10px;
+    border-radius: 15px;
+}
+
+.WorkDesc {
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+.WorkTech {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    margin: 0 -5px;
+}
+
+.WorkTech div {
+    color: var(--text-light);
+    background-color: var(--tech);
+    padding: 0 15px;
+    height: fit-content;
+    border-radius: 50px;
+    transition: color 0.2s linear, background-color 0.2s linear;
+    cursor: default;
+    margin: 0 5px 10px 5px;
+}
+
+.WorkTech div:hover {
+    background-color: var(--text-main);
+    color: var(--tech);
+}
+
+.EmailForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contact-container {
+    font-family: 'Jost', sans-serif;
+    width: fit-content;
+}
+
+.Contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contacts-input {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 40px;
+    width: 400px;
+    padding: 0 15px;
+    margin: 0;
+    outline: none;
+    background: rgb(0, 0, 0, 0);
+    color: var(--text-main);
+    border: solid 1px var(--text-main);
+    border-radius: 0 !important;
+    transition: all 0.5s ease;
+}
+
+.Contacts-input::placeholder {
+    color: var(--text-main);
+    opacity: 0.7;
+}
+
+.Contacts-input:focus {
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.Contacts-input:focus::placeholder {
+    opacity: 0;
+}
+
+.Contact-email {
+    margin-top: 20px;
+}
+
+.Message-area {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 100px;
+    width: 400px;
+    padding: 15px;
+    margin: 0;
+    margin-top: 20px;
+    resize: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    outline: none;
+    background: rgb(0, 0, 0, 0);
+    color: var(--text-main);
+    border: solid 1px var(--text-main);
+    border-radius: 0 !important;
+    transition: border 0.5s ease, box-shadow 0.5s ease;
+}
+
+.Message-area::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.Message-area::placeholder {
+    color: var(--text-main);
+    opacity: 0.7;
+}
+
+.Message-area:focus {
+    box-shadow: 0 0 5px 1px var(--text-light);
+}
+
+.Message-area:focus::placeholder {
+    opacity: 0;
+}
+
+.Empty {
+    font-family: 'Jost', sans-serif;
+    border: solid 1px var(--error);
+    transition: border 0.5s ease, box-shadow 0.5s ease;
+}
+
+.Empty:focus {
+    box-shadow: 0 0 5px 1px var(--error-light) !important;
+}
+
+.Name-error, .Email-error, .Message-error {
+    user-select: none;
+    font-size: 14px;
+    color: var(--error);
+}
+
+.center-send {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.btn-send {
+    user-select: none;
+    position: relative;
+    margin: 0;
+    padding: 2px 15px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    color: var(--background);
+    background-color: var(--text-main);
+    border-radius: 50px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 1;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.btn-send:hover {
+    opacity: 0.7;
+}
+
+.btn-send:active {
+    transform: scale(0.95);
+}
+
+.Message-sent {
+    user-select: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-main);
+    border: solid 1px var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    width: 230px;
+    padding-left: 20px;
+    position: fixed;
+    top: calc(100vh - 80px);
+    left: 30px;
+    backdrop-filter: blur(30px);
+}
+
+.Message-sent.Error {
+    color: var(--error);
+    border: solid 1px var(--error);
+}
+
+.CloseAlert {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(100% - 40px);
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.CloseAlert:hover {
+    opacity: 0.5;
+}
+
+.CloseAlert::before,
+.CloseAlert::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 1px);
+    left: calc(100% - 25px);
+	width: 20px;
+	height: 1px;
+	background: var(--text-main);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.CloseAlert.Error::before,
+.CloseAlert.Error::after {
+    background: var(--error);
+}
+
+.CloseAlert::before:hover,
+.CloseAlert::after:hover {
+    opacity: 0.5;
+}
+
+.CloseAlert::before {
+	transform: rotate(45deg);
+}
+
+.CloseAlert::after {
+	transform: rotate(-45deg);
+}
+
+.Message-sent {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.Was-sent-container {
+    position: absolute;
+    left: -10000px;
+}
+
+.Sending-container {
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.Sending-en, .Sending-ru {
+    margin-top: 10px;
+    width: 100px;
+    height: 1px;
+    transform: translateX(-100px);
+    border-top: 1px solid var(--text-main);
+    transition: transform 1.1s linear;
+}
+
+.Hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.FooterLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.FooterAdresses {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+.Phone:hover, .Email:hover {
+    text-decoration: underline;
+}
+
+.SocialMedia ul {
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+
+.SocialItem.Vk {
+    margin-top: 7px;
+}
+
+.SocialItem {
+    user-select: none;
+    opacity: 1;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.SocialItem:hover {
+    opacity: 0.7;
+}
+
+.SocialItem:active {
+    transform: scale(0.95);
+}
+
+.FooterCopyright {
+    user-select: none;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+}
+
+.LangSetterContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LanguageSetter {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 40px;
+    width: 400px;
+    padding: 0 15px;
+    margin: 0;
+    outline: none;
+    color: var(--text-main);
+    border: solid 1px var(--text-main);
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.LanguageSetter:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.Setter2 {
+    width: 400px;
+}
+
+.LangList {
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.Var {
+    border-top: unset;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.VarDown {
+    transform: translate(0px, -90px);
+}
+
+.VarUp {
+    transform: translate(0px, 0px);
+}
+
+.Down::before,
+.Down::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 10px;
+	height: 1px;
+	background: var(--text-main);
+    opacity: 1;
+}
+
+.Down::before {
+    left: calc(100% - 32px);
+	transform: rotate(45deg);
+}
+
+.Down::after {
+    left: calc(100% - 25px);
+	transform: rotate(-45deg);
+}
+
+.Up::before,
+.Up::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 10px;
+	height: 1px;
+	background: var(--text-main);
+    opacity: 1;
+}
+
+.Up::before {
+    left: calc(100% - 25px);
+	transform: rotate(45deg);
+}
+
+.Up::after {
+    left: calc(100% - 32px);
+	transform: rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+    .HomeContent {
+        width: 65%;
+    }
+
+    .CompContainer {
+        width: 35%;
+    }
+
+    .ContentContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ContentName {
+        margin-bottom: 20px;
+    }
+
+    .ContentDesc {
+        width: 100%;
+    }
+
+    .ContentWorks {
+        width: 100%;
+    }
+
+    .EmailForm {
+        width: 100%;
+    }
+
+    .LangSetterContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 790px) {
+    .HeaderRow {
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .Language {
+        display: none;
+    }
+
+    .LanguageContainer {
+        display: flex !important;
+    }
+
+    .MainContent {
+        width: 80%;
+    }
+
+    .Contact-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Contact-form {
+        padding: 0;
+        width: fit-content;
+        display: flex;
+    }
+
+    .HeaderGit, .LogoName, .WorkName, .Phone {
+        text-decoration: none !important;
+    }
+
+    .WorkTech div {
+        color: var(--text-light) !important;
+        background-color: var(--tech) !important;
+    }
+
+    .FooterRow {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .Home {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .CompContainer {
+        width: 60%;
+    }
+
+    .HomeContent {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .Contact-form {
+        width: calc(100%);
+    }
+
+    .Contacts-input, .Message-area {
+        width: calc(100% - 32px);
+    }
+
+    .LangList {
+        width: 100%;
+    }
+
+    .LanguageSetter {
+        width: calc(100% - 32px);
+    }
+}
+
+@media (max-width: 500px) {
+    .HeaderRow {
+        width: calc(100% - 10px);
+        padding-right: 10px;
+    }
+
+    .HomeText {
+        font-size: 16px !important;
+        line-height: 22px !important;
+        margin-bottom: 15px;
+    }
+
+    .ContentText {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+
+    .WorkDesc {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+
+    .CompContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 389px) {
+    .FooterLinks {
+        flex-direction: column;
+    }
+
+    .FooterAdresses {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .FooterAdresses div {
+        margin-bottom: 20px;
+    }
+
+    .SocialMedia {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 370px) {
+    .HeaderGit {
+        display: none;
+    }
+}

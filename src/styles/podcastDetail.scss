@@ -1,0 +1,459 @@
+@use 'podcast';
+
+.PDEpisodeContainer {
+    padding: 120px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .PDEFlash {
+        user-select: none;
+        position: absolute;
+        height: 45vw;
+        left: -2vw;
+        top: 3%;
+    }
+
+    .PDEStars {
+        user-select: none;
+        position: absolute;
+        height: 10vw;
+        right: -2vw;
+        top: 22%;
+    }
+
+    .PDEOrangeLine {
+        user-select: none;
+        position: absolute;
+        height: 7vw;
+        right: 0;
+        top: calc(100% - 3.5vw);
+        z-index: 9;
+    }
+
+    .PDEContent {
+        margin-top: 40px;
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .PDEImg {
+            user-select: none;
+            width: 40%;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .PDEText {
+            width: 50%;
+
+            .PDEFirstRow {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .PDEEps1 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: podcast.$orange;
+                }
+
+                .PDEFeatured {
+                    border: solid 1px podcast.$orange;
+                    border-radius: 3px;
+                    padding: 3px;
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: podcast.$orange;
+                }
+            }
+
+            .PDESub {
+                font-size: 35px;
+                font-weight: 700;
+            }
+
+            .PDELine {
+                margin: 15px 0;
+                width: 100%;
+                height: 0.5px;
+                background-color: black;
+            }
+
+            .PDEPar {
+                font-size: 16px;
+                line-height: 27px;
+                color: podcast.$dark-grey;
+                margin-bottom: 30px;
+            }
+
+            .PDEHosted {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 50px;
+
+                .PDEAuthor {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .PDEAImg {
+                        height: 40px;
+                        margin-right: 20px;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .PDEAText {
+                        font-size: 14px;
+                        color: podcast.$dark-grey;
+                    }
+
+                    .PDEAName {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: podcast.$orange;
+                    }
+                }
+
+                .PDEDate {
+                    font-size: 14px;
+                    color: podcast.$dark-grey;
+                }
+            }
+
+            .PDEBtns {
+                display: flex;
+                flex-direction: row;
+
+                .PDESubscribe {
+                    @include podcast.click;
+                    @include podcast.button;
+                    margin-right: 20px;
+                }
+
+                .PDEListen {
+                    @include podcast.click;
+                    user-select: none;
+                    margin: 0;
+                    font-family: Montserrat Alternates;
+                    font-weight: 600;
+                    font-size: 11px;
+                    border-radius: 8px;
+                    padding: 15px 30px;
+                    border: solid 2px black;
+                    box-shadow: 5px 5px 0px podcast.$grey;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        width: 149px;
+
+                        img {
+                            height: 11px;
+                            margin-right: 15px;
+                        }
+
+                        div  {
+                            line-height: 13px;
+
+                            span {
+                                color: podcast.$orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .PDETags {
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .PDETText {
+            font-size: 14px;
+            font-weight: 600;
+            color: podcast.$dark-grey;
+            margin-right: 28px;
+        }
+
+        .PDETTag {
+            font-size: 12px;
+            color: podcast.$dark-grey;
+            border: solid 1px podcast.$dark-grey;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+
+        .PDETTag + .PDETTag {
+            margin-left: 5px;
+        }
+    }
+}
+
+.PDLatestContainer {
+    background-color: white;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 8;
+
+    .PDLSub {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 80px;
+        position: relative;
+
+        img {
+            user-select: none;
+            position: absolute;
+            height: 6vw;
+            left: -4vw;
+            top: -3vw;
+            transform: rotateY(180deg);
+        }
+    }
+
+    .PDLMenu {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+
+        .PDLMItems {
+            width: calc(100% - 40px);
+            padding: 0 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .PDLMItem {
+                user-select: none;
+                font-size: 18px;
+                color: podcast.$dark-grey;
+                cursor: pointer;
+                transition: opacity 0.2s linear, color 0.2s linear;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            .ActiveItem {
+                color: podcast.$orange;
+                font-weight: 600;
+            }
+        }
+
+        .PDLMLine {
+            width: 100%;
+            height: 1px;
+            background-color: podcast.$dark-grey;
+        }  
+    }
+
+    .DetailPodcastEpisodesContainer {
+        width: 85%;
+        height: fit-content;
+        position: relative;
+
+        .PDBlackWave {
+            position: absolute;
+            height: 14vw;
+            transform: rotate(200deg);
+            bottom: -8vw;
+            left: -8vw;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .PDESub {
+        font-size: 30px !important;
+    }
+
+    .PDEPar {
+        font-size: 14px !important;
+    }
+
+    .PDEAImg {
+        height: 35px !important;
+    }
+
+    .PDLSub {
+        font-size: 35px !important;
+
+        img {
+            height: 10vw !important;
+            left: -8vw !important;
+            top: -6vw !important;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .PDEFlash {
+        top: 30% !important;
+    }
+
+    .PDEStars {
+        top: 35% !important;
+        height: 16vw !important;
+    }
+
+    .PDEOrangeLine {
+        height: 10vw !important;
+        top: calc(100% - 5vw) !important;
+    }
+
+    .PDEContent {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .PDEImg {
+        width: 50vw !important;
+    }
+
+    .PDEText {
+        width: 50vw !important;
+    }
+
+    .PDEBtns {
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .PDESubscribe {
+        width: calc(30% - 60px) !important;
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .PDEListen {
+        width: calc(60% - 60px) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .PDETags {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 770px) {
+    .PDLMItems {
+        flex-wrap: wrap !important;
+        margin-bottom: 10px !important;
+    }
+
+    .PDLMItem {
+        min-width: 50% !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .PDEBtns {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .PDESubscribe {
+        width: calc(100% - 60px) !important;
+        margin-bottom: 30px !important;
+    }
+
+    .PDEListen {
+        width: calc(100% - 60px) !important;
+    }
+}
+
+@media (max-width: 630px) {
+    .PDEOrangeLine {
+        height: 14vw !important;
+        top: calc(100% - 7vw) !important;
+    }
+
+    .PDEHosted {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        align-items: flex-start !important;
+    }
+
+    .PDEDate {
+        margin-bottom: 30px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .PDEImg {
+        width: 100% !important;
+    }
+
+    .PDEText {
+        width: 100% !important;
+    }
+
+    .PDETags {
+        width: 85% !important;
+    }
+
+    .PDLSub {
+        img {
+            height: 14vw !important;
+            left: -10vw !important;
+            top: -8vw !important;
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    .PDESub {
+        font-size: 28px !important;
+    }
+
+    .PDEPar {
+        font-size: 12px !important;
+    }
+
+    .PDLSub {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .PDLSub {
+        font-size: 26px !important;
+    }
+}

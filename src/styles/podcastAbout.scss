@@ -1,0 +1,1222 @@
+@use 'podcast';
+
+.SmallScreen {
+    display: none !important;
+}
+
+.PAboutContainer {
+    width: 100%;
+    padding: 140px 0 250px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .FlashImg {
+        user-select: none;
+        height: 40vw;
+        margin-bottom: 0px;
+        position: absolute;
+        left: 0;
+        top: calc(45% - 20vw);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .StarsImg {
+        user-select: none;
+        height: 10vw;
+        margin-bottom: 7vw;
+        position: absolute;
+        right: -2vw;
+        top: calc(40% - 6vw);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .PAboutOrangeLineBig {
+        user-select: none;
+        height: 6vw;
+        position: absolute;
+        bottom: -3vw;
+        right: 0vw;
+    }
+
+    .PAboutSubBlack {
+        font-size: 5.6vw;
+        height: 80px;
+        height: 5.6vw;
+        font-weight: 700;
+        color: black;
+    }
+
+    .PAboutSubOrange {
+        font-size: 5.6vw;
+        font-weight: 700;
+        color: podcast.$orange;
+        margin-bottom: 30px;
+    }
+
+    .PAboutPar {
+        width: 44vw;
+        text-align: center;
+        line-height: 25px;
+        font-size: 16px;
+        color: podcast.$dark-grey;
+        margin-bottom: 30px;
+    }
+
+    .PAboutBtns {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .PAboutBecomeBtn {
+        background-color: unset !important;
+        color: black !important;
+        margin-right: 20px !important;
+        @include podcast.button();
+        @include podcast.click();
+    }
+
+    .PAboutSubBtn {
+        @include podcast.button();
+        @include podcast.click();
+    }
+
+    .PAboutDigits {
+        position: absolute;
+        bottom: -8.5vw;
+        z-index: 10;
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .PADCard {
+            height: 17vw;
+            width: 32%;
+            background-color: white;
+            border-radius: 8px;
+            border: solid 2px black;
+            box-shadow: 5px 5px 0 podcast.$orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .PADCount {
+                font-size: 50px;
+                font-weight: 700;
+                color: podcast.$orange;
+                margin-bottom: 20px;
+
+                span {
+                    color: black !important;
+                }
+            }
+
+            .PADText {
+                font-size: 16px;
+                color: podcast.$dark-grey;
+            }
+        }
+    }
+}
+
+.PListenersAboutContainer {
+    width: 100%;
+    padding: 100px 0 100px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .PLACSub {
+        margin-top: 60px;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .PLACPar {
+        font-size: 18px;
+        font-weight: 400;
+        color: podcast.$dark-grey;
+        margin-bottom: 40px;
+    }
+
+    .PLACImg {
+        width: 85%;
+        margin-bottom: 50px;
+
+        img {
+            user-select: none;
+            width: 100%;
+        }
+    }
+
+    .PAboutHistory {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        position: relative;
+
+        img {
+            user-select: none;
+            position: absolute;
+            height: 6vw;
+            left: -4vw;
+            top: -3vw;
+            transform: rotateY(180deg);
+        }
+    }
+
+    .PAHTextContainer {
+        width: 85%;
+        font-size: 17px;
+        color: podcast.$dark-grey;
+        letter-spacing: 0.01em;
+        line-height: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        .PAHText {
+            width: 48%;
+
+            .PAHTPar + .PAHTPar {
+                margin-top: 20px;
+            }
+
+            .PAHTPar {
+                strong {
+                    color: black;
+                }
+
+                span {
+                    cursor: pointer;
+                    color: black;
+                    text-decoration: underline;
+                    transition: opacity 0.2s linear, transform 0.2s linear;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    .PAHLine {
+        width: 85%;
+        height: 1px;
+        background-color: podcast.$grey;
+        margin-bottom: 80px;
+    }
+
+    .PFounder {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 60px;
+
+        img {
+            user-select: none;
+            position: absolute;
+            height: 350%;
+            right: -17%;
+            top: -200%;
+        }
+    }
+
+    .PFFounders {
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .PFCard {
+            width: 46.5%;
+            padding: 1vw;
+            border: solid 2px black;
+            border-radius: 10px;
+            box-shadow: 10px 10px 0 black;
+            display: flex;
+            flex-direction: row;
+
+            .PFCardHuman {
+                width: 50%;
+            }
+
+            .PFCContent {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .PFCImg {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+                    img {
+                        margin-top: 20px;
+                        margin-right: 10px;
+                        height: 7vw;
+                        width: 7vw;
+                    }
+                }
+
+                .PFCText {
+                    padding: 0 7%;
+
+                    .PFCHost {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+
+                    .PFCName {
+                        font-size: 30px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        letter-spacing: 0.01em;
+                        margin-bottom: 20px;
+                    }
+
+                    .PFCPar {
+                        font-size: 13px;
+                        color: podcast.$dark-grey;
+                        margin-bottom: 20px;
+                    }
+
+                    .PFCLine {
+                        width: 100%;
+                        height: 0.5px;
+                        background-color: black;
+                        margin-bottom: 10px;
+                    }
+
+                    .PFCSocial {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+
+                        .PFCSText {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: podcast.$dark-grey;
+                            margin-right: 20px;
+                        }
+
+                        .PFCSImgs {
+                            display: flex;
+                            flex-direction: row;
+                            
+                            img {
+                                cursor: pointer;
+                                height: 20px;
+                                width: 20px;
+                                transition: opacity 0.2s linear, transform 0.2s linear;
+
+                                &:hover {
+                                    opacity: 0.7;
+                                }
+
+                                &:active {
+                                    transform: scale(0.95);
+                                }
+                            }
+
+                            img + img {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.PSponsorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0;
+
+    .PSponsorSub {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        position: relative;
+
+        img {
+            user-select: none;
+            height: 150%;
+            position: absolute;
+            left: -25%;
+            top: -100%;
+        }
+    }
+
+    .PSponsorPar {
+        font-size: 18px;
+        color: podcast.$dark-grey;
+        margin-bottom: 80px;
+    }
+
+
+    .PSponsors {
+        display: flex;
+        flex-direction: row;
+        margin-left: 7.5%;
+        width: 92.5%;
+        height: calc(180px + 64px);
+        margin-bottom: 60px;
+        overflow: hidden;
+        position: relative;
+
+        .PSponsorCard {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: solid 2px black;
+            width: 500px;
+            height: 180px;
+            margin-right: 20px;
+            transform: translateX(0);
+            transition: transform 0.5s ease;
+
+            .PSPCIcon {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .PSPCGoogle {
+                    width: 50%;
+                }
+
+                .PSPCSpotify {
+                    width: 35%;
+                }
+
+                .PSPCYoutube {
+                    width: 35%;
+                }
+            }
+
+            .PSPCLine {
+                width: 70%;
+                height: 0.5px;
+                background-color: podcast.$dark-grey;
+                margin-bottom: 30px;
+            }
+
+            .PSPCText {
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: podcast.$dark-grey;
+
+                span {
+                    color: black;
+                }
+            }
+        }   
+    }
+
+    .PSPCBtnsContainer {
+        width: 100%;
+
+        .PSponsorCardBtns {
+            user-select: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 7.5%;
+            height: 50px;
+            width: 110px;
+            transition: none;
+    
+            .PLisLeft, .PLisRight {
+                height: 100%;
+                div {
+                    height: 100%;
+                    opacity: 1;
+                    transition: opacity 0.2s ease;
+                    
+                    img {
+                        height: 100%;
+                        border-radius: 100px;
+                        @include podcast.click();
+                    }
+                }
+            }
+    
+            .BtnInvis {
+                position: absolute;
+                height: 0 !important;
+                opacity: 0 !important;
+                pointer-events: none;
+                transition: none;
+            }
+    
+            .LeftOrange, .RightBlack {
+                height: 100%;
+                transition: none;
+                transform: rotate(180deg);
+            }
+    
+            .LeftBlack, .RightBlack {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.PGetInTouchContainer {
+    background-color: white;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .PGITSub {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+
+        img {
+            position: absolute;
+            height: 2vw;
+            top: -2vw;
+            right: -3vw;
+        }
+    }
+
+    .PGITPar {
+        font-size: 18px;
+        color: podcast.$dark-grey;
+        margin-bottom: 50px;
+    }
+
+    .PGITLine {
+        width: 50%;
+        height: 1px;
+        background-color: podcast.$grey;
+        margin-bottom: 40px;
+    }
+
+    .PGITForm {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        .PGITInputContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .PGITInputElement {
+            width: 49%;
+
+            .PGITInputText {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 15px;
+
+                span {
+                    color: podcast.$orange;
+                }
+            }
+
+            .PGITInput {
+                width: calc(100% - 32px);
+                height: 20px;
+                border: solid 1px black;
+                border-radius: 5px;
+                padding: 12px 15px;
+                font-family: Montserrat Alternates, sans-serif;
+                font-size: 16px;
+                color: black;
+                outline: none;
+                transition: border 0.2s linear;
+
+                &::placeholder {
+                    color: podcast.$dark-grey;
+                    font-weight: 400 !important;
+                }
+
+                &:focus {
+                    border: solid 1px podcast.$orange;
+                    font-weight: 600;
+                }
+            }
+
+            .PGITInputEmpty {
+                border: solid 1px podcast.$orange;
+            }
+        }
+
+        .PGITInputMessage {
+            width: 100%;
+        }
+
+        .PGITTextarea {
+            width: calc(100% - 32px);
+            height: 150px;
+            border: solid 1px black;
+            border-radius: 5px;
+            padding: 12px 15px;
+            font-family: Montserrat Alternates, sans-serif;
+            font-size: 16px;
+            color: black;
+            outline: none;
+            transition: border 0.2s linear;
+            resize: none;
+            margin-bottom: 40px;
+
+            &::placeholder {
+                color: podcast.$dark-grey;
+                font-weight: 400 !important;
+            }
+
+            &:focus {
+                border: solid 1px podcast.$orange;
+                font-weight: 600;
+            }
+        }
+
+        .PGITAfterForm {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .PGITRequired {
+                font-size: 14px;
+                width: 180px;
+
+                span {
+                    color: podcast.$orange;
+                }
+            }
+
+            .PGITSendContainer {
+                height: 48px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include podcast.click;
+
+                .PGITSend {
+                    @include podcast.button;
+                }
+            }
+
+
+            .PGITLink {
+                width: 150px;
+                font-size: 14px;
+                margin-right: 30px;
+
+                span {
+                    color: podcast.$orange;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .GITOrangeLineBig {
+        user-select: none;
+        position: absolute;
+        height: 7vw;
+        left: -0.5vw;
+        top: 67%;
+    }
+
+    .GITStars {
+        position: absolute;
+        top: 27%;
+        right: 10vw;
+        height: 7vw;
+    }
+
+    .OrangeLine {
+        user-select: none;
+        position: absolute;
+        bottom: -5vw;
+        width: 10vw;
+        height: 10vw;
+        z-index: 10;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .PGITForm {
+        width: 60% !important;
+    }
+
+    .PGITLine {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 1040px) {
+    .PFCard {
+        width: 45% !important;
+    }
+
+    .PFCardHuman {
+        width: 45% !important;
+    }
+
+    .PFCContent {
+        width: 55% !important;
+    }
+}
+
+@media (max-width: 950px) {
+    .PFCardHuman {
+        width: 40% !important;
+    }
+
+    .PFCContent {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 920px) {
+    .PFFounders {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .PFCard + .PFCard {
+        margin-top: 20px !important;
+    }
+
+    .PFCard {
+        width: 450px !important;
+    }
+
+    .PFCardHuman {
+        width: 50% !important;
+    }
+
+    .PFCContent {
+        width: 50% !important;
+    }
+
+    .PGITRequired {
+        font-size: 12px !important;
+        width: 150px !important;
+    }
+
+    .PGITLink {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .PADCount {
+        font-size: 40px !important;
+    }
+
+    .PLACSub {
+        font-size: 35px !important;
+    }
+
+    .PLACPar {
+        font-size: 16px !important;
+    }
+
+    .PAboutHistory {
+        img {
+            height: 10vw !important;
+            left: -8vw !important;
+            top: -6vw !important;
+        }
+    }
+
+    .PSponsorSub {
+        font-size: 35px !important;
+
+        img {
+            height: 10vw !important;
+            left: -8vw !important;
+            top: -6vw !important;
+        }
+    }
+
+    .PGITSub {
+        font-size: 35px !important;
+
+        img {
+            height: 5vw !important;
+            right: -7vw !important;
+            top: -4vw !important;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .PSponsorPar {
+        font-size: 16px !important;
+    }
+
+    .PGITPar {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 820px) {
+    .PGITForm {
+        width: 70% !important;
+    }
+
+    .PGITLine {
+        width: 70% !important;
+    }
+
+    .GITStars {
+        right: 5vw !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .PAboutPar {
+        font-size: 14px !important;
+    }
+
+    .PAboutBtns {
+        flex-direction: column !important;
+        width: 200px !important;
+    }
+
+    .PAboutBecomeBtn {
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+        width: calc(100% - 60px) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .PAboutSubBtn {
+        width: calc(100% - 60px) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .PADCard {
+        width: 30% !important;
+    }
+
+    .PADCount {
+        font-size: 35px !important;
+    }
+
+    .PADText {
+        font-size: 14px !important;
+    }
+
+    .PAHTextContainer {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 780px) {
+    .PSponsorPar {
+        font-size: 14px !important;
+    }
+
+    .PGITPar {
+        font-size: 14px !important;
+    }
+
+    .PGITForm {
+        width: 80% !important;
+    }
+
+    .PGITLine {
+        width: 80% !important;
+    }
+
+    .GITStars {
+        right: 3vw !important;
+    }
+}
+
+@media (max-width: 730px) {
+    .PADCard {
+        border: solid 1.5px black !important;
+    }
+
+    .PADCount {
+        font-size: 30px !important;
+    }
+
+    .PADText {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 666px) {
+    .PSponsorCard {
+        width: calc(85vw - 40px) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .PADCount {
+        margin-bottom: 10px !important;
+    }
+    .PADText {
+        width: 80px !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 630px) {
+    .PSponsorCardBtns {
+        width: 85vw !important;
+    }
+
+    .PGITRequired {
+        font-size: 10px !important;
+        width: 120px !important;
+    }
+
+    .PGITLink {
+        font-size: 10px !important;
+        width: 120px !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .PAboutSubBlack {
+        font-size: 7vw !important;
+        height: 7vw !important;
+    }
+
+    .PAboutSubOrange {
+        font-size: 7vw !important;
+        height: 7vw !important;
+    }
+
+    .PAboutPar {
+        font-size: 16px !important;
+        width: 250px !important;
+        margin-bottom: 7vw !important;
+    }
+
+    .PLACSub {
+        font-size: 30px !important;
+    }
+
+    .PAHTextContainer {
+        flex-direction: column !important;
+    }
+
+    .PAHText + .PAHText {
+        margin-top: 20px !important;
+    }
+
+    .PAHText {
+        width: 100% !important;
+    }
+
+
+}
+
+@media (max-width: 560px) {
+    .PAboutHistory {
+        font-size: 26px !important;
+
+        img {
+            height: 14vw !important;
+            left: -10vw !important;
+            top: -8vw !important;
+        }
+    }
+
+    .PFounder {
+        font-size: 26px !important;
+    }
+
+    .PFCard {
+        width: 70vw !important;
+    }
+
+    .PFCardHuman {
+        width: 40% !important;
+    }
+
+    .PFCContent {
+        width: 60% !important;
+    }
+
+    .PFCName {
+        font-size: 26px !important;
+    }
+
+    .PFCPar {
+        font-size: 11px !important;
+    }
+
+    .PSPCIcon {
+        height: 20% !important;
+    }
+
+    .PSponsorSub {
+        img {
+            height: 12vw !important;
+            left: -10vw !important;
+            top: -8vw !important;
+        }
+    }
+
+    .PGITSub {
+        img {
+            height: 7vw !important;
+            right: -10vw !important;
+            top: -6vw !important;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .PAboutDigits {
+        bottom: -12.5vw !important;
+    }
+
+    .PADCard {
+        height: 25vw !important;
+        border: solid 1px black !important;
+    }
+
+    .PADCount {
+        font-size: 25px !important;
+    }
+
+    .PGITInputContainer {
+        flex-direction: column !important;
+        margin-bottom: 30px !important;
+    }
+
+    .PGITInputElement + .PGITInputElement {
+        margin-top: 30px !important;
+    }
+
+    .PGITInputElement {
+        width: 100% !important;
+    }
+
+    .PGITMessage {
+        margin-bottom: 10px !important;
+    }
+
+    .PGITAfterForm {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .PGITRequired {
+        width: 102px !important;
+    }
+
+    .PGITLink {
+        width: 102px !important;
+    }
+
+    .BigScreen {
+        display: none !important;
+    }
+
+    .SmallScreen {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .PAboutSubBlack {
+        font-size: 9vw !important;
+        height: 11vw !important;
+    }
+
+    .PAboutSubOrange {
+        font-size: 9vw !important;
+        height: 11vw !important;
+    }
+
+    .PLACSub {
+        font-size: 26px !important;
+    }
+
+    .PLACPar {
+        font-size: 14px !important;
+    }
+
+    .PFounder {
+        font-size: 23px !important;
+    }
+}
+
+@media (max-width: 490px) {
+    .PFCardHuman {
+        width: 50% !important;
+    }
+
+    .PFCContent {
+        width: 50% !important;
+    }
+
+    .PFCSText {
+        margin-bottom: 10px !important;
+    }
+
+    .PFCSocial {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 470px) {
+    .PSPCText {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .PFCard {
+        width: 80vw !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .PSponsors {
+        height: calc(200px + 64px) !important;
+    }
+
+    .PSponsorCard {
+        height: 200px !important;
+    }
+
+    .PSPCIcon {
+        height: 20% !important;
+        img {
+            width: 60% !important;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .PADCount {
+        font-size: 22px !important;
+    }
+
+    .PADText {
+        width: 70px !important;
+        font-size: 10px !important;
+    }
+
+    .PLACSub {
+        font-size: 20px !important;
+    }
+
+    .PLACPar {
+        font-size: 12px !important;
+    }
+
+    .PAboutHistory {
+        font-size: 20px !important;
+    }
+
+    .PFounder {
+        font-size: 20px !important;
+    }
+
+    .PSponsorSub {
+        font-size: 30px !important;
+    }
+
+    .PGITSub {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .PFCard {
+        width: 90vw !important;
+        box-shadow: 6px 6px 0 black !important;
+    }
+
+    .PFCName {
+        font-size: 22px !important;
+    }
+
+    .PSponsorSub {
+        font-size: 26px !important;
+    }
+}
+
+@media (max-width: 345px) {
+    .PSponsors {
+        height: calc(180px + 64px) !important;
+    }
+
+    .PSponsorCard {
+        height: 180px !important;
+    }
+
+    .PSPCIcon {
+        height: 15% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .PSPCLine {
+        margin-bottom: 15px !important;
+    }
+
+    .PSPCText {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .PLACPar {
+        width: 70% !important;
+        text-align: center !important;
+    }
+
+    .PFounder {
+        font-size: 18px !important;
+    }
+}

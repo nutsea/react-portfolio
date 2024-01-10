@@ -1,0 +1,361 @@
+.E-game-s-content {
+    min-height: calc(100vh - 80px - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 30px;
+}
+
+.E-game-s-container {
+    margin-bottom: 72px;
+    padding: 0 29px;
+    width: 619px;
+    height: 360px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 10px 10px 40px var(--shadow);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.E-game-s-pic {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.E-game-s-pic img {
+    height: 90%;
+}
+
+.E-game-s-text {
+    width: 65%;
+}
+
+.E-game-s-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.E-game-s-sub-text {
+    color: black;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 36px;
+}
+
+.E-game-s-sub-name {
+    margin-top: 10px;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    background-color: var(--light-blue);
+    border-radius: 7px;
+    margin-left: 7px;
+}
+
+.E-game-s-desc {
+    color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.E-game-choose-level-text {
+    color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.E-game-levels {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.E-game-levels button {
+    min-height: 36px;
+    max-height: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s linear, color 0.2s linear, transform 0.2s linear;
+}
+
+.E-game-levels button + button {
+    margin-left: 20px;
+}
+
+.E-game-levels button:active {
+    transform: scale(0.95);
+}
+
+.E-g-a1 {
+    color: var(--green);
+    border: solid 2px var(--green);
+}
+
+.E-g-a1:hover {
+    background-color: var(--light-green);
+}
+
+.La1 {
+    color: white;
+    background-color: var(--green) !important;
+}
+
+.E-g-a2 {
+    color: var(--yellow);
+    border: solid 2px var(--yellow);
+}
+
+.E-g-a2:hover {
+    background-color: var(--light-yellow);
+}
+
+.La2 {
+    color: white;
+    background-color: var(--yellow) !important;
+}
+
+.E-g-b1 {
+    color: var(--red);
+    border: solid 2px var(--red);
+}
+
+.E-g-b1:hover {
+    background-color: var(--light-red);
+}
+
+.Lb1 {
+    color: white;
+    background-color: var(--red) !important;
+}
+
+.E-g-b2 {
+    color: var(--dark-red);
+    border: solid 2px var(--dark-red);
+}
+
+.E-g-b2:hover {
+    background-color: var(--light-dark-red);
+}
+
+.Lb2 {
+    color: white;
+    background-color: var(--dark-red) !important;
+}
+
+.E-g-c1 {
+    color: var(--dark-pink);
+    border: solid 2px var(--dark-pink);
+}
+
+.E-g-c1:hover {
+    background-color: var(--light-dark-pink);
+}
+
+.Lc1 {
+    color: white;
+    background-color: var(--dark-pink) !important;
+}
+
+.E-g-c2 {
+    color: var(--blue);
+    border: solid 2px var(--cyan);
+}
+
+.E-g-c2:hover {
+    background-color: var(--light-cyan);
+}
+
+.Lc2 {
+    color: white;
+    background-color: var(--cyan) !important;
+}
+
+.E-game-start-btn {
+    margin: 0;
+    color: white;
+    background-color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 9px 14px;
+    border-radius: 50px;
+    opacity: 1;
+    pointer-events: none;
+    transition: background-color 0.2s linear;
+}
+
+.Ready-to-start {
+    background-color: var(--blue) !important;
+    transition: transform 0.2s linear, opacity 0.2s linear, background-color 0.2s linear;
+    pointer-events: all !important;
+}
+
+.Ready-to-start:hover {
+    opacity: 0.8;
+}
+
+.Ready-to-start:active {
+    transform: scale(0.95);
+}
+
+.E-game-s-pic-small {
+    display: none;
+}
+
+@media (max-width: 830px) {
+    .E-game-s-container {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .E-game-s-pic {
+        width: 30%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 610px) {
+    .E-game-s-content {
+        justify-content: flex-start;
+    }
+
+    .E-game-s-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 300px;
+        height: 405px;
+        height: fit-content;
+    }
+
+    .E-game-s-pic {
+        display: none;
+    }
+
+    .E-game-s-pic-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        margin: 30px 0 20px 0;
+    }
+
+    .Small-sprint {
+        background-color: var(--light-pink);
+    }
+
+    .Small-audio {
+        background-color: var(--light-blue);
+    }
+
+    .E-game-s-pic-small img {
+        height: 50px;
+    }
+
+    .Small-sprint img {
+        margin-top: 10px;
+    }
+
+    .E-game-s-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .E-game-s-sub {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .E-game-s-sub-text {
+        font-size: 28px;
+    }
+
+    .E-game-s-desc {
+        width: 300px;
+        text-align: center;
+    }
+
+    .E-game-choose-level {
+        width: 100%;
+    }
+
+    .E-game-levels {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .E-game-levels button {
+        margin: 0 !important;
+        min-height: 45px;
+        max-height: 45px;
+        min-width: 45px;
+        max-width: 45px;
+        font-size: 16px;
+    }
+
+    .E-start-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .E-game-start-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .E-game-s-content {
+        padding-top: 10px;
+    }
+
+    .E-game-s-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 350px) {
+    .E-game-s-content {
+        padding-top: 0;
+    }
+    
+    .E-game-s-container {
+        margin-top: -10px;
+        transform: scale(0.8);
+    }
+}
